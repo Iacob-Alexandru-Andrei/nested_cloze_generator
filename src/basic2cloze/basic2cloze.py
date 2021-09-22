@@ -1,19 +1,25 @@
 import re
 
-from anki.notes import NoteFieldsCheckResult
-from aqt import gui_hooks, mw
+from anki.notes import Note
+from aqt import Qt, gui_hooks, mw
 from aqt.addcards import AddCards
 from aqt.editor import MODEL_CLOZE, Editor
-from aqt.utils import KeyboardModifiersPressed, tooltip, tr
+from aqt.utils import tooltip, tr
 
+from .consts import ANKI_VERSION_TUPLE
 from .modelFinder import get_basic_note_type_ids, get_cloze_note_type_ids
 from .modelSelector import target_model
 
+try:
+    from anki.notes import NoteFieldsCheckResult
+except:
+    pass
+
 
 def main():
-    def convert_basic_to_cloze(problem, note):
-        if not (
-            note._note_type['id'] in get_basic_note_type_ids() and
+    def convert_basic_to_cloze(problem, note: Note):
+        if ANKI_VERSION_TUPLE >= (2, 1, 45) and not (
+            note.note_type()['id'] in get_basic_note_type_ids() and
             problem == tr.adding_cloze_outside_cloze_notetype()
         ):
             return problem
@@ -69,14 +75,15 @@ def main():
                 if m:
                     highest = max(highest, sorted([int(x) for x in m])[-1])
             # reuse last?
-            if not KeyboardModifiersPressed().alt:
+            if not self.mw.app.keyboardModifiers() & Qt.AltModifier:
                 highest += 1
             # must start at 1
             highest = max(1, highest)
             self.web.eval("wrap('{{c%d::', '}}');" % highest)
 
-        shortcuts.append(("Ctrl+Shift+C", lambda: myOnCloze(editor)))
-        shortcuts.append(("Ctrl+Shift+Alt+C", lambda: myOnCloze(editor)))
+        if ANKI_VERSION_TUPLE >= (2, 1, 45):
+            shortcuts.append(("Ctrl+Shift+C", lambda: myOnCloze(editor)))
+            shortcuts.append(("Ctrl+Shift+Alt+C", lambda: myOnCloze(editor)))
     gui_hooks.editor_did_init_shortcuts.append(
         add_cloze_shortcut_that_works_on_basic_notes)
 
@@ -87,13 +94,14 @@ def main():
             )
     gui_hooks.editor_did_load_note.append(show_cloze_button)
 
-    original_update_duplicate_display = Editor._update_duplicate_display
+    if ANKI_VERSION_TUPLE >= (2, 1, 45):
+        original_update_duplicate_display = Editor._update_duplicate_display
 
-    def _update_duplicate_display_ignore_cloze_problems_for_basic_notes(self, result) -> None:
-        if self.note.note_type()['id'] in get_basic_note_type_ids():
-            if result == NoteFieldsCheckResult.NOTETYPE_NOT_CLOZE:
-                result = NoteFieldsCheckResult.NORMAL
-            if result == NoteFieldsCheckResult.FIELD_NOT_CLOZE:
-                result = NoteFieldsCheckResult.NORMAL
-        original_update_duplicate_display(self, result)
-    Editor._update_duplicate_display = _update_duplicate_display_ignore_cloze_problems_for_basic_notes
+        def _update_duplicate_display_ignore_cloze_problems_for_basic_notes(self, result) -> None:
+            if self.note.note_type()['id'] in get_basic_note_type_ids():
+                if result == NoteFieldsCheckResult.NOTETYPE_NOT_CLOZE:
+                    result = NoteFieldsCheckResult.NORMAL
+                if result == NoteFieldsCheckResult.FIELD_NOT_CLOZE:
+                    result = NoteFieldsCheckResult.NORMAL
+            original_update_duplicate_display(self, result)
+        Editor._update_duplicate_display = _update_duplicate_display_ignore_cloze_problems_for_basic_notes

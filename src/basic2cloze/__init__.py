@@ -1,9 +1,12 @@
-from anki import version as anki_version # type: ignore
+from .consts import ANKI_VERSION_TUPLE
 
-ANKI_VERSION_TUPLE = tuple(int(i) for i in anki_version.split("."))
+if ANKI_VERSION_TUPLE >= (2, 1, 40):
+    from aqt import gui_hooks
 
-if ANKI_VERSION_TUPLE >= (2, 1, 45):
     from .basic2cloze import main
+    from .compat import add_compat_aliases
+
+    gui_hooks.profile_did_open.append(add_compat_aliases)
     main()
 else:
     from .basic2cloze_old.basic2cloze import main

@@ -1,9 +1,10 @@
 import re
 
+from anki.hooks import wrap
 from anki.notes import Note
 from aqt import Qt, gui_hooks, mw
 from aqt.addcards import AddCards
-from aqt.editor import MODEL_CLOZE, Editor
+from aqt.editor import Editor
 from aqt.utils import tooltip, tr
 
 from .consts import ANKI_VERSION_TUPLE
@@ -12,6 +13,11 @@ from .modelSelector import target_model
 
 try:
     from anki.notes import NoteFieldsCheckResult
+except:
+    pass
+
+try:
+    from aqt.editor import MODEL_CLOZE
 except:
     pass
 
@@ -94,6 +100,7 @@ def main():
             )
     gui_hooks.editor_did_load_note.append(show_cloze_button)
 
+    # hide cloze warnings
     if ANKI_VERSION_TUPLE >= (2, 1, 45):
         original_update_duplicate_display = Editor._update_duplicate_display
 
@@ -105,3 +112,50 @@ def main():
                     result = NoteFieldsCheckResult.NORMAL
             original_update_duplicate_display(self, result)
         Editor._update_duplicate_display = _update_duplicate_display_ignore_cloze_problems_for_basic_notes
+    elif ANKI_VERSION_TUPLE >= (2, 1, 40):
+        def _onClozeNew(self, *, _old):
+            basicNoteTypes = get_basic_note_type_ids()
+            model_id = self.note.model()["id"]
+            if model_id in basicNoteTypes and self.addMode:
+                model_type_backup = self.note.model()['type']
+                self.note.model()['type'] = MODEL_CLOZE
+
+            result = _old(self)
+
+            self.note.model()['type'] = model_type_backup
+
+            return result
+
+        Editor._onCloze = wrap(Editor._onCloze, _onClozeNew, "around")
+    else:
+        def _onClozeNew(self, *, _old):
+            model_id = self.note.model()["id"]
+            if model_id in get_basic_note_type_ids() and self.addMode:
+                hook_re_search()
+                result = _old(self)
+                unhook_re_search()
+            return result
+
+        _oldReSearch = None
+        _clozeCheckerRegex = "{{(.*:)*cloze:"
+
+        def hook_re_search():
+            global _oldReSearch
+
+            # Hook this template
+            # if not re.search("{{(.*:)*cloze:", self.note.model()["tmpls"][0]["qfmt"]):
+            def newSearch(pattern, string, flags=0, *, _old):
+                if pattern == _clozeCheckerRegex:
+                    return True
+                return _old(pattern, string, flags)
+
+            _oldReSearch = re.search
+            re.search = wrap(re.search, newSearch, "around")
+
+        def unhook_re_search():
+            global _oldReSearch
+            if _oldReSearch:
+                re.search = _oldReSearch
+                _oldReSearch = None
+
+        Editor._onCloze = wrap(Editor._onCloze, _onClozeNew, "around")

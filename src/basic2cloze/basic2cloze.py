@@ -122,7 +122,8 @@ def main():
 
             result = _old(self)
 
-            self.note.model()['type'] = model_type_backup
+            if model_id in basicNoteTypes and self.addMode:
+                self.note.model()['type'] = model_type_backup
 
             return result
 

@@ -35,13 +35,16 @@ def main():
             return problem
 
         old_model = mw.col.models.get(note.mid)
-        front = note[old_model['flds'][0]['name']]
-        back = note[old_model['flds'][1]['name']]
-
         new_model = target_model(note)
+
+        field_values = [ 
+            note[old_model['flds'][i]['name']]
+            for i in range(min(len(old_model['flds']), len(new_model['flds'])))
+        ]
+
         note.__init__(mw.col, new_model)
-        note[new_model['flds'][0]['name']] = front
-        note[new_model['flds'][1]['name']] = back
+        for i, value in enumerate(field_values):
+            note[new_model['flds'][i]['name']] = value
 
         return None
     gui_hooks.add_cards_will_add_note.append(convert_basic_to_cloze)

@@ -5,4 +5,4 @@
 
 Automatically convert cloze-y things to cloze type.
 
-![Example image](bas2cloz.gif)
+![Example image](screenshots/basic2cloze.gif)

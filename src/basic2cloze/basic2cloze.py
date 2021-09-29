@@ -71,47 +71,15 @@ def main():
     gui_hooks.add_cards_did_init.append(
         change_notetype_from_cloze_to_basic_in_addcards_dialog)
 
-    def add_cloze_shortcut_that_works_on_basic_notes(shortcuts, editor):
-
-        original_onCloze = Editor.onCloze
-
-        # code adapted from original onCloze and _onCloze
-        def myOnCloze(self):
-            if(
-                self.note.note_type()['id'] in get_basic_note_type_ids() or
-                self.note.note_type()["type"] == MODEL_CLOZE
-            ):
-                self.call_after_note_saved(
-                    lambda: _myOnCloze(editor), keepFocus=True)
-            else:
-                original_onCloze(self)
-
-        def _myOnCloze(self):
-            # find the highest existing cloze
-            highest = 0
-            for name, val in list(self.note.items()):
-                m = re.findall(r"\{\{c(\d+)::", val)
-                if m:
-                    highest = max(highest, sorted([int(x) for x in m])[-1])
-            # reuse last?
-            if not self.mw.app.keyboardModifiers() & Qt.AltModifier:
-                highest += 1
-            # must start at 1
-            highest = max(1, highest)
-            self.web.eval("wrap('{{c%d::', '}}');" % highest)
-
-        if ANKI_VERSION_TUPLE >= (2, 1, 45):
-            shortcuts.append(("Ctrl+Shift+C", lambda: myOnCloze(editor)))
-            shortcuts.append(("Ctrl+Shift+Alt+C", lambda: myOnCloze(editor)))
-    gui_hooks.editor_did_init_shortcuts.append(
-        add_cloze_shortcut_that_works_on_basic_notes)
-
-    def show_cloze_button(editor):
-        if editor.note.note_type()['id'] in get_basic_note_type_ids():
-            editor.web.eval(
-                '$editorToolbar.then(({ templateButtons }) => templateButtons.showButton("cloze")); '
-            )
-    gui_hooks.editor_did_load_note.append(show_cloze_button)
+    # adding the cloze buttons also enables the shortcut!
+    # in older version the button and the shortcut exist by default
+    if ANKI_VERSION_TUPLE >= (2, 1, 45):
+        def show_cloze_button(editor):
+            if editor.note.note_type()['id'] in get_basic_note_type_ids():
+                editor.web.eval(
+                    '$editorToolbar.then(({ templateButtons }) => templateButtons.showButton("cloze")); '
+                )
+        gui_hooks.editor_did_load_note.append(show_cloze_button)
 
     # hide cloze warnings
     if ANKI_VERSION_TUPLE >= (2, 1, 45):

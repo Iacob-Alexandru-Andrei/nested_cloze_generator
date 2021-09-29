@@ -2,7 +2,7 @@ import re
 
 from anki.hooks import wrap
 from anki.notes import Note
-from aqt import Qt, gui_hooks, mw
+from aqt import gui_hooks, mw
 from aqt.addcards import AddCards
 from aqt.editor import Editor
 from aqt.utils import tooltip

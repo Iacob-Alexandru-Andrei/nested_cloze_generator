@@ -5,7 +5,7 @@ from anki.notes import Note
 from aqt import Qt, gui_hooks, mw
 from aqt.addcards import AddCards
 from aqt.editor import Editor
-from aqt.utils import tooltip, tr
+from aqt.utils import tooltip
 
 from .consts import ANKI_VERSION_TUPLE
 from .modelFinder import get_basic_note_type_ids, get_cloze_note_type_ids
@@ -21,12 +21,22 @@ try:
 except:
     pass
 
+CLOZE_RE = r"\{\{c\d+::[\s\S]*?\}\}"
+
+
+def contains_cloze(note: Note):
+    for fld in note.fields:
+        m = re.search(CLOZE_RE, fld)
+        if m:
+            return True
+    return False
+
 
 def main():
     def convert_basic_to_cloze(problem, note: Note):
-        if ANKI_VERSION_TUPLE >= (2, 1, 45) and not (
+        if not (
             note.note_type()['id'] in get_basic_note_type_ids() and
-            problem == tr.adding_cloze_outside_cloze_notetype()
+            contains_cloze(note)
         ):
             return problem
 
@@ -37,7 +47,7 @@ def main():
         old_model = mw.col.models.get(note.mid)
         new_model = target_model(note)
 
-        field_values = [ 
+        field_values = [
             note[old_model['flds'][i]['name']]
             for i in range(min(len(old_model['flds']), len(new_model['flds'])))
         ]

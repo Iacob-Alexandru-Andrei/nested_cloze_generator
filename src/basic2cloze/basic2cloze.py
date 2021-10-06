@@ -51,10 +51,12 @@ def main():
             note[old_model['flds'][i]['name']]
             for i in range(min(len(old_model['flds']), len(new_model['flds'])))
         ]
+        tags = note.tags
 
         note.__init__(mw.col, new_model)
         for i, value in enumerate(field_values):
             note[new_model['flds'][i]['name']] = value
+        note.tags = tags
 
         return None
     gui_hooks.add_cards_will_add_note.append(convert_basic_to_cloze)

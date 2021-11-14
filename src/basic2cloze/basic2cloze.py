@@ -41,7 +41,7 @@ def main():
             return problem
 
         if not target_model(note):
-            tooltip("[Automatic Basic to Cloze] Cannot find target 'Cloze' model")
+            tooltip("[Automatic Basic to Cloze] Cannot find 'Cloze' note type")
             return problem
 
         old_model = mw.col.models.get(note.mid)

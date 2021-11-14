@@ -28,10 +28,10 @@ def get_models():
         _cloze_note_type_ids = model_ids_for_names(["Cloze", _("Cloze")])
 
     if not _basic_note_type_ids:
-        tooltip("[Automatic Basic to Cloze] Cannot find source 'Basic' model")
+        tooltip("[Automatic Basic to Cloze] Cannot find 'Basic' note type")
 
     if not _cloze_note_type_ids:
-        tooltip("[Automatic Basic to Cloze] Cannot find target 'Cloze' model")
+        tooltip("[Automatic Basic to Cloze] Cannot find 'Cloze' note type")
 
 
 addHook("profileLoaded", get_models)

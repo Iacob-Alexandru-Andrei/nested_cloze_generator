@@ -118,6 +118,8 @@ def main():
                 hook_re_search()
                 result = _old(self)
                 unhook_re_search()
+            else:
+                result = _old(self)
             return result
 
         _oldReSearch = None

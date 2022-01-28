@@ -35,8 +35,7 @@ def contains_cloze(note: Note):
 def main():
     def convert_basic_to_cloze(problem, note: Note):
         if not (
-            note.note_type()['id'] in get_basic_note_type_ids() and
-            contains_cloze(note)
+            note.note_type()["id"] in get_basic_note_type_ids() and contains_cloze(note)
         ):
             return problem
 
@@ -48,70 +47,92 @@ def main():
         new_model = target_model(note)
 
         field_values = [
-            note[old_model['flds'][i]['name']]
-            for i in range(min(len(old_model['flds']), len(new_model['flds'])))
+            note[old_model["flds"][i]["name"]]
+            for i in range(min(len(old_model["flds"]), len(new_model["flds"])))
         ]
         tags = note.tags
 
         note.__init__(mw.col, new_model)
         for i, value in enumerate(field_values):
-            note[new_model['flds'][i]['name']] = value
+            note[new_model["flds"][i]["name"]] = value
         note.tags = tags
 
         return None
+
     gui_hooks.add_cards_will_add_note.append(convert_basic_to_cloze)
 
     def change_notetype_from_cloze_to_basic_in_addcards_dialog(addcards: AddCards):
         try:
-            if addcards.notetype_chooser.selected_notetype_id in get_cloze_note_type_ids():
-                addcards.notetype_chooser.selected_notetype_id = get_basic_note_type_ids()[
-                    0]
+            if (
+                addcards.notetype_chooser.selected_notetype_id
+                in get_cloze_note_type_ids()
+            ):
+                addcards.notetype_chooser.selected_notetype_id = (
+                    get_basic_note_type_ids()[0]
+                )
                 addcards.notetype_chooser.show()
         except Exception as e:
             print(e)
             pass  # don't cause an error when note types are missing or this code becomes outdated
+
     gui_hooks.add_cards_did_init.append(
-        change_notetype_from_cloze_to_basic_in_addcards_dialog)
+        change_notetype_from_cloze_to_basic_in_addcards_dialog
+    )
 
     # adding the cloze buttons also enables the shortcut!
     # in older version the button and the shortcut exist by default
-    if ANKI_VERSION_TUPLE >= (2, 1, 45):
-        def show_cloze_button(editor):
-            if editor.note.note_type()['id'] in get_basic_note_type_ids():
-                editor.web.eval(
-                    '$editorToolbar.then(({ templateButtons }) => templateButtons.showButton("cloze")); '
-                )
-        gui_hooks.editor_did_load_note.append(show_cloze_button)
+    def maybe_show_cloze_button(editor):
+        if editor.note.note_type()["id"] not in get_basic_note_type_ids():
+            return
+
+        if ANKI_VERSION_TUPLE >= (2, 1, 50):
+            editor.web.eval(
+                'noteEditorPromise.then((noteEditor) => noteEditor.toolbar.templateButtons.showButton("cloze")); '
+            )
+        elif ANKI_VERSION_TUPLE >= (2, 1, 45):
+            editor.web.eval(
+                '$editorToolbar.then(({ templateButtons }) => templateButtons.showButton("cloze")); '
+            )
+
+    gui_hooks.editor_did_load_note.append(maybe_show_cloze_button)
 
     # hide cloze warnings
     if ANKI_VERSION_TUPLE >= (2, 1, 45):
         original_update_duplicate_display = Editor._update_duplicate_display
 
-        def _update_duplicate_display_ignore_cloze_problems_for_basic_notes(self, result) -> None:
-            if self.note.note_type()['id'] in get_basic_note_type_ids():
-                if result == NoteFieldsCheckResult.NOTETYPE_NOT_CLOZE:
-                    result = NoteFieldsCheckResult.NORMAL
-                if result == NoteFieldsCheckResult.FIELD_NOT_CLOZE:
+        def _update_duplicate_display_ignore_cloze_problems_for_basic_notes(
+            self, result
+        ) -> None:
+            if self.note.note_type()["id"] in get_basic_note_type_ids():
+                if (
+                    result == NoteFieldsCheckResult.NOTETYPE_NOT_CLOZE
+                    or result == NoteFieldsCheckResult.FIELD_NOT_CLOZE
+                ):
                     result = NoteFieldsCheckResult.NORMAL
             original_update_duplicate_display(self, result)
-        Editor._update_duplicate_display = _update_duplicate_display_ignore_cloze_problems_for_basic_notes
+
+        Editor._update_duplicate_display = (
+            _update_duplicate_display_ignore_cloze_problems_for_basic_notes
+        )
     elif ANKI_VERSION_TUPLE >= (2, 1, 40):
+
         def _onClozeNew(self, *, _old):
             basicNoteTypes = get_basic_note_type_ids()
             model_id = self.note.model()["id"]
             if model_id in basicNoteTypes and self.addMode:
-                model_type_backup = self.note.model()['type']
-                self.note.model()['type'] = MODEL_CLOZE
+                model_type_backup = self.note.model()["type"]
+                self.note.model()["type"] = MODEL_CLOZE
 
             result = _old(self)
 
             if model_id in basicNoteTypes and self.addMode:
-                self.note.model()['type'] = model_type_backup
+                self.note.model()["type"] = model_type_backup
 
             return result
 
         Editor._onCloze = wrap(Editor._onCloze, _onClozeNew, "around")
     else:
+
         def _onClozeNew(self, *, _old):
             model_id = self.note.model()["id"]
             if model_id in get_basic_note_type_ids() and self.addMode:

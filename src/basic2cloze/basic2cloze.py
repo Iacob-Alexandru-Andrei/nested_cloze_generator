@@ -81,13 +81,17 @@ def main():
 
     # adding the cloze buttons also enables the shortcut!
     # in older version the button and the shortcut exist by default
-    def maybe_show_cloze_button(editor):
+    def maybe_show_cloze_button(editor: Editor):
         if editor.note.note_type()["id"] not in get_basic_note_type_ids():
             return
 
         if ANKI_VERSION_TUPLE >= (2, 1, 50):
             editor.web.eval(
-                'noteEditorPromise.then((noteEditor) => noteEditor.toolbar.templateButtons.showButton("cloze")); '
+                """
+                require("anki/ui").loaded.then(() =>
+                    require("anki/NoteEditor").instances[0].toolbar.templateButtons.show("cloze")
+                )
+                """
             )
         elif ANKI_VERSION_TUPLE >= (2, 1, 45):
             editor.web.eval(

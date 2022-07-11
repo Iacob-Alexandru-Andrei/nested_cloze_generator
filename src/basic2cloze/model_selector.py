@@ -2,7 +2,7 @@ import re
 
 from aqt import mw
 
-from .modelFinder import get_basic_note_type_ids, get_cloze_note_type_ids
+from .model_finder import get_basic_note_type_ids, get_cloze_note_type_ids
 
 clozeHideAllType = "Cloze (Hide all)"
 

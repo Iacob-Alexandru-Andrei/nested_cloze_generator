@@ -8,8 +8,8 @@ from aqt.editor import Editor
 from aqt.utils import tooltip
 
 from .consts import ANKI_VERSION_TUPLE
-from .modelFinder import get_basic_note_type_ids, get_cloze_note_type_ids
-from .modelSelector import target_model
+from .model_finder import get_basic_note_type_ids, get_cloze_note_type_ids
+from .model_selector import target_model
 
 try:
     from anki.notes import NoteFieldsCheckResult

@@ -85,7 +85,15 @@ def main():
         if editor.note.note_type()["id"] not in get_basic_note_type_ids():
             return
 
-        if ANKI_VERSION_TUPLE >= (2, 1, 50):
+        if ANKI_VERSION_TUPLE >= (2, 1, 54):
+            editor.web.eval(
+                """
+                require("anki/ui").loaded.then(() =>
+                    require("anki/NoteEditor").instances[0].toolbar.toolbar.show("cloze")
+                )
+                """
+            )
+        elif ANKI_VERSION_TUPLE >= (2, 1, 50):
             editor.web.eval(
                 """
                 require("anki/ui").loaded.then(() =>

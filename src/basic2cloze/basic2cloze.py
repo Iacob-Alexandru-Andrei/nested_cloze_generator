@@ -85,7 +85,7 @@ def main():
         if editor.note.note_type()["id"] not in get_basic_note_type_ids():
             return
 
-        if ANKI_VERSION_TUPLE >= (2, 1, 54):
+        if ANKI_VERSION_TUPLE >= (2, 1, 52):
             editor.web.eval(
                 """
                 require("anki/ui").loaded.then(() =>

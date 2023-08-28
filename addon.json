@@ -1,9 +1,9 @@
 {
-    "display_name": "basic2cloze",
-    "module_name": "basic2cloze",
-    "repo_name": "basic2cloze",
+    "display_name": "nested_cloze_generator",
+    "module_name": "nested_cloze_generator",
+    "repo_name": "nested_cloze_generator",
     "ankiweb_id": "",
-    "author": "RisingOrange",
+    "author": "AlexIacob",
     "conflicts": [],
     "targets": [
         "anki21"

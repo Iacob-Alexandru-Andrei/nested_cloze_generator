@@ -1,11 +1,16 @@
 import re
-
+from re import Match
+import statistics
+from typing import Tuple
 from anki.hooks import wrap
 from anki.notes import Note
 from aqt import gui_hooks, mw
 from aqt.addcards import AddCards
 from aqt.editor import Editor
 from aqt.utils import tooltip
+import itertools
+from itertools import combinations
+
 
 from .consts import ANKI_VERSION_TUPLE
 from .model_finder import get_basic_note_type_ids, get_cloze_note_type_ids
@@ -32,6 +37,74 @@ def contains_cloze(note: Note):
     return False
 
 
+def find_clozes(note):
+    """
+    Finds all clozes in the note and returns them as a list.
+    """
+    clozes = {}
+    for fld_index, fld in enumerate(note.fields):
+        for cloze_match in re.findall(CLOZE_RE, fld):
+            cloze_num, cloze_text = cloze_match.split("::")
+            if cloze_num not in clozes:
+                clozes[cloze_num] = []
+            clozes[cloze_num].append((fld_index, cloze_match, cloze_text))
+    return clozes
+
+
+import itertools
+
+
+def generate_combinations(clozes, limit: int = 9, linear_limit: int = 11):
+    """
+    Generates all unique combinations of the clozes and returns them as a list.
+    """
+    combinations = []
+
+    # Generate combinations in descending order
+    for i in range(len(clozes), 1, -1):
+        combination = tuple(clozes[:i])
+        if combination not in combinations:
+            combinations.append(combination)
+            if len(combinations) + len(clozes) >= linear_limit:
+                return combinations
+
+    if len(combinations) + len(clozes) >= limit:
+        return combinations
+
+    for i in range(2, len(clozes) + 1):
+        choose_i = itertools.combinations(clozes, i)
+        choose_i = sorted(
+            choose_i,
+            key=lambda c: statistics.mean([clozes.index(cloze) for cloze in c]),
+        )
+        choose_i = sorted(
+            choose_i,
+            key=lambda c: statistics.variance([clozes.index(cloze) for cloze in c]),
+        )
+        for combination in choose_i:
+            if combination not in combinations:
+                combinations.append(combination)
+                if len(combinations) + len(clozes) >= limit:
+                    return combinations
+
+    return combinations
+
+
+def modify_clozes(note):
+    """
+    Modifies the clozes on a note, in-place, to be replaced by the final clozes containing all combinations.
+    """
+    clozes = find_clozes(note)
+    combinations = generate_combinations(sorted(list(clozes.keys())))
+    for comb_index, combination in enumerate(combinations):
+        new_cloze = f"{{{{c{comb_index+len(clozes)+1}::"
+        for cloze_num in combination:
+            for field_index, cloze, cloze_text in clozes[cloze_num]:
+                note.fields[field_index] = note.fields[field_index].replace(
+                    cloze_text, f"{new_cloze}{cloze_text}}}}}"
+                )
+
+
 def main():
     def convert_basic_to_cloze(problem, note: Note):
         if not (
@@ -42,6 +115,8 @@ def main():
         if not target_model(note):
             tooltip("[Automatic Basic to Cloze] Cannot find 'Cloze' note type")
             return problem
+
+        modify_clozes(note)
 
         old_model = mw.col.models.get(note.mid)
         new_model = target_model(note)

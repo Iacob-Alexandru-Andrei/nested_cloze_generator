@@ -1,7 +1,7 @@
 import re
 from re import Match
 import statistics
-from typing import Tuple
+from typing import Tuple, cast
 from anki.hooks import wrap
 from anki.notes import Note
 from aqt import gui_hooks, mw
@@ -42,51 +42,65 @@ def find_clozes(note):
     Finds all clozes in the note and returns them as a list.
     """
     clozes = {}
+    original_cloze_hints = {}
     for fld_index, fld in enumerate(note.fields):
         for cloze_match in re.findall(CLOZE_RE, fld):
-            cloze_num, cloze_text = cloze_match.split("::")
+            res = cast(str, cloze_match).split("::")
+            cloze_hint = ""
+            if len(res) == 2:
+                cloze_num, cloze_text = cast(str, cloze_match).split("::")
+                cloze_text = f"{cloze_num}::"+cloze_text
+            else:
+                cloze_num, cloze_text, cloze_hint = cast(str, cloze_match).split("::")
+                cloze_hint = cloze_hint.replace("}", "")
+                cloze_text = f"{cloze_num}::"+cloze_text+f"::{cloze_hint}"+"}}"
+
             if cloze_num not in clozes:
                 clozes[cloze_num] = []
-            clozes[cloze_num].append((fld_index, cloze_match, cloze_text))
-    return clozes
+
+            clozes[cloze_num].append((fld_index, cloze_match, cloze_text, cloze_hint))
+            original_cloze_hints[cloze_text] = cloze_hint
+    return clozes, original_cloze_hints
 
 
 import itertools
+ 
 
-
-def generate_combinations(clozes, limit: int = 9, linear_limit: int = 11):
+def generate_combinations(clozes, limit):
     """
     Generates all unique combinations of the clozes and returns them as a list.
     """
-    combinations = []
-
-    # Generate combinations in descending order
-    for i in range(len(clozes), 1, -1):
-        combination = tuple(clozes[:i])
+    combinations = []    
+    # Generate combinations in ascending order
+    for i in reversed(range(1, len(clozes)-1)):
+        if len(combinations) + len(clozes) >= limit:
+            break
+        combination = tuple(clozes[i:])
         if combination not in combinations:
             combinations.append(combination)
-            if len(combinations) + len(clozes) >= linear_limit:
-                return combinations
-
-    if len(combinations) + len(clozes) >= limit:
-        return combinations
-
-    for i in range(2, len(clozes) + 1):
-        choose_i = itertools.combinations(clozes, i)
-        choose_i = sorted(
-            choose_i,
-            key=lambda c: statistics.mean([clozes.index(cloze) for cloze in c]),
-        )
-        choose_i = sorted(
-            choose_i,
-            key=lambda c: statistics.variance([clozes.index(cloze) for cloze in c]),
-        )
-        for combination in choose_i:
-            if combination not in combinations:
-                combinations.append(combination)
+            
+    if len(combinations) + len(clozes) < limit:
+        for i in range(2, len(clozes)):
+            choose_i = itertools.combinations(clozes, i)
+            choose_i = sorted(
+                choose_i,
+                key=lambda c: statistics.mean([clozes.index(cloze) for cloze in c]),
+            )
+            choose_i = sorted(
+                choose_i,
+                key=lambda c: statistics.variance([clozes.index(cloze) for cloze in c]),
+            )
+            for combination in choose_i:
                 if len(combinations) + len(clozes) >= limit:
-                    return combinations
-
+                    break
+                if combination not in combinations:
+                    combinations.append(combination)
+    
+    # Add the final combination
+    final_comb = tuple(clozes)
+    if final_comb not in combinations and len(clozes) > 1:
+        combinations.append(final_comb)
+                    
     return combinations
 
 
@@ -94,15 +108,29 @@ def modify_clozes(note):
     """
     Modifies the clozes on a note, in-place, to be replaced by the final clozes containing all combinations.
     """
-    clozes = find_clozes(note)
-    combinations = generate_combinations(sorted(list(clozes.keys())))
+    clozes, original_cloze_hints = find_clozes(note)
+    # cloze_keys = sorted(list(clozes.keys()))
+    cloze_keys = list(clozes.keys())
+    combinations = generate_combinations(cloze_keys, 8)
     for comb_index, combination in enumerate(combinations):
         new_cloze = f"{{{{c{comb_index+len(clozes)+1}::"
-        for cloze_num in combination:
-            for field_index, cloze, cloze_text in clozes[cloze_num]:
-                note.fields[field_index] = note.fields[field_index].replace(
-                    cloze_text, f"{new_cloze}{cloze_text}}}}}"
-                )
+        for i, cloze_num in enumerate(combination):
+            to_iterate_clozes = {(cloze_text, field_index): (field_index,cloze,cloze_hint) for field_index, cloze, cloze_text, cloze_hint in clozes[cloze_num]}
+            
+            for (cloze_text,field_index),(field_index, cloze, cloze_hint) in to_iterate_clozes.items():
+                to_replace = cloze_text
+
+                if original_cloze_hints[cloze_text] != "":
+                    note.fields[field_index] = note.fields[field_index].replace(
+                        cloze_text,
+                        f"{new_cloze}{cloze_text}::{original_cloze_hints[cloze_text]}"
+                        + "}}",
+                    )
+
+                else:
+                    note.fields[field_index] = note.fields[field_index].replace(
+                        cloze_text, f"{new_cloze}{cloze_text}"+ "}}",
+                    )
 
 
 def main():

@@ -111,7 +111,7 @@ def modify_clozes(note):
     clozes, original_cloze_hints = find_clozes(note)
     # cloze_keys = sorted(list(clozes.keys()))
     cloze_keys = list(clozes.keys())
-    combinations = generate_combinations(cloze_keys, 8)
+    combinations = generate_combinations(cloze_keys, 10)
     for comb_index, combination in enumerate(combinations):
         new_cloze = f"{{{{c{comb_index+len(clozes)+1}::"
         for i, cloze_num in enumerate(combination):

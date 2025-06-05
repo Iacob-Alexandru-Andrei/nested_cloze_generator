@@ -18,9 +18,9 @@ ANKI_CONNECT_URL = "http://localhost:8765"
 CLOZE_RE = r"\{\{c\d+::[\s\S]*?\}\}"
 
 # We define a maximum base index for which we KEEP cloze markup (<= 5 is OK).
-MAX_BASE_INDEX = 5
-# We'll limit final cloze combos to 8, per your original code.
-COMBO_LIMIT = 8
+MAX_BASE_INDEX = 6
+# We'll limit final cloze combos to 10, per your original code.
+COMBO_LIMIT = 10
 
 ###############################################################################
 # (A) For each field, skip if field name == "Occlusion"
@@ -285,37 +285,6 @@ def main():
 
     BATCH_SIZE = 50
     updated_count = 0
-    
-    with tqdm(total=len(note_ids), desc="Processing", unit="note") as pbar:
-        for start_index in range(0, len(note_ids), BATCH_SIZE):
-            chunk = note_ids[start_index : start_index + BATCH_SIZE]
-            notes_info = invoke("notesInfo", notes=chunk)
-
-            for note_info in notes_info:
-                note_id = note_info["noteId"]
-                fields = note_info["fields"]
-
-                # We'll store all before/after changes for this note
-                changes_for_note = []
-
-                # Convert fields to a list of {name, value}, preserving order
-                field_entries = []
-                for field_name in fields.keys():
-                    field_entries.append({
-                        "name": field_name,
-                        "value": fields[field_name]["value"]
-                    })
-
-                for fd in field_entries:
-                    name = fd["name"]
-                    old_val = fd["value"]
-                    # Skip "Occlusion"
-                    if should_skip_field(name):
-                        continue
-
-                    new_val = strip_nested_to_base_cloze(old_val)
-                    fd["value"] = new_val
-                pbar.update(1)
 
     log_path = os.path.join(os.getcwd(), "modified_notes.txt")
     with open(log_path, "w", encoding="utf-8") as log_file:
@@ -386,14 +355,15 @@ def main():
                                     log_file.write(f"      {new_vals[i]}\n\n")
                             log_file.write("="*60 + "\n\n")
                     except WronglyFormatted:
+                        failures.append(note_data)
                         pass
 
                     pbar.update(1)
 
         log_file.write(f"\n Failures {len(failures)}\n")
         for failure in failures:
-            log_file.write(failure)
-            log.write("\n")
+            log_file.write(str(failure))
+            log_file.write("\n")
 
     print(f"Done! Updated {updated_count} notes. See '{log_path}' for details.")
 

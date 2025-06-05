@@ -1,0 +1,866 @@
+=== Stripped Clozes Preview (No Changes in Anki) ===
+
+  
+
+    \({ }^2\) The notation {{c1::\(S n\)}} or {{c2::\(S(n)\)}} is also often used in the literature to denote the successor \(n++\) of \(n\). One may be tempted to use the more familiar notation {{c3::\(n+1\)}} in place of \(n++\) to denote the successor of \(n\), but this would introduce a {{c4::circularity}} in our foundations, since the notion of {{c5::addition}} will be defined in terms of the {{c5::successor}} operation.
+
+============================================================
+
+  
+
+    <ol><li>Axiom 2.1&nbsp; {{c1::0}} is a {{c3::natural number.}}</li><li>Axiom 2.2&nbsp; If \(n\) is a {{c5::natural number}}, then {{c2::\(n++\)}} is {{c4::also a natural number}}.</li></ol>
+
+============================================================
+
+  
+
+    Definition 2.1.3 We define \(^3 1\) to be the number {{c1::\(0++\)}}, \(2\) to be the number {{c2::\((0++)++\)}}, 3 to be the number {{c2::\(((0++)++)++\)}}, etc. (In other words, \(1:=\){{c5::{{c3::\(0++\)}}}} , \(2:\)={{c5::{{c3::\(1++\)}}}}, \(3\):= {{c5::{{c3::\(2++\)}}}}, etc.) In this text I use " \(x\){{c5::{{c4::\(:=\)}}}}\(y\) " to denote the statement that \(x\) is defined to equal \(y\).)
+
+============================================================
+
+  
+
+    Axiom 2.3<br><ol><li>&nbsp;{{c1::0}} is {{c3::not}} the {{c5::{{c2::successor}}}} of {{c5::{{c4::any natural number}}}}; i.e., we have {{c5::{{c2::\(n++\)}}}}{{c3::\(\neq\)}} {{c1::\(0\)}} for {{c5::{{c4::every natural number \(n\).}}}}</li></ol>
+
+============================================================
+
+  
+
+    Axiom 2.4 {{c1::Different}} natural numbers must have {{c1::different}} successors; i.e., if \(n\), \(m\) are natural numbers and \(n\) {{c4::\(\neq\)}} \(m\), then {{c2::\(n++\)}}{{c4::\(\neq\)}} {{c3::\(m++\)}}. Equivalently, \({ }^4\) if {{c2::\(n++\)}}{{c5::=}}{{c3::\(m++\)}} then we must have \(n\){{c5::=}}\(m\).
+
+============================================================
+
+  
+
+    <ol><li>{{c3::Contrapositive}}:</li><ol><li>&nbsp; {{c2::\(P\) \(\rightarrow\) \(Q\)}} \(\longleftrightarrow\) {{c1::\(\neg Q\) \(\rightarrow\) \(\neg P\)&nbsp;}}</li></ol><li>{{c4::Inverse}}:</li><ol><li>&nbsp;{{c3::\(\neg P\) \(\rightarrow\) \(\neg Q\)}}</li></ol><li>{{c5::Converse}}:</li><ol><li>{{c4::\(Q\) \(\rightarrow\) \(P\)}}<br></li></ol><li>Negation:</li><ol><li>{{c5::\(\neg(P \rightarrow Q)\)}}<br></li></ol></ol>
+
+============================================================
+
+  
+
+    \text { Proposition 2.1.8 } 6 \text { is not equal to } 2 .<br><ol><li>Proof, since for two numbers to have the {{c5::same successor}} they have to {{c1::be equal}} this implies {{c2::5}}={{c3::1}} and then {{c3::4}}={{c2::0}} which contradicts the axiom that {{c4::0 not be the successor of any number}}</li></ol>
+
+============================================================
+
+  
+
+    Axiom 2.5 (Principle of mathematical induction). Let \(P(n)\) be any property pertaining to a natural number \(n\). Suppose that {{c1::\(P(0)\)}} is true, and suppose that whenever {{c2::\(P(n)\)}} is {{c5::true}}, {{c3::\(P(n++)\)}} is {{c5::also true}}. Then \(P(n)\) is true for {{c4::every natural number \(n\).}}
+
+============================================================
+
+  
+
+    Proposition Template 2.1.11 A certain {{c2::property \(P(n)\)}} is true for {{c1::every natural number \(n\).}}<br><br>Proof Template:<br><ol><li>&nbsp;We use induction. We first verify the base case \{{c3::(n=0\)}},</li><li>&nbsp;Now suppose inductively that \(n\) is a natural number, and {{c2::\(P(n)\)}} has {{c4::already been proven}}.&nbsp;</li><li>We now prove {{c5::\(P(n++)\)}}. , assuming that {{c2::\(P(n)\)}} is {{c4::true}}</li><li>&nbsp;This closes the induction, and thus \(P(n)\) is true for all numbers \(n\).</li></ol>
+
+============================================================
+
+  
+
+    What are the peano axioms about:<br><ol><li>{{c1::0 is a natural number}}</li><li>{{c2::If&nbsp;\(n\) is a natural number its successor&nbsp;\(n++\) also is}}</li><li>{{c3::0 is not a successor}}</li><li>{{c4::Two numbers have the same successor iff they are the same}}</li><li>{{c5::If a property&nbsp;\(P\) holds for 0 and&nbsp;\(P(n)\)\(\implies\)\(P(n++)\) then it holds for all natural numbers}}</li></ol>
+
+============================================================
+
+  
+
+    {{c5::Assumption}} 2.6 (Informal) There ex{{c2::i}}sts a {{c1::number system \(\mathbf{N}\)}}, whose elements we will call {{c3::natural numbers,}} for which the {{c4::peano}} axioms are true.
+
+============================================================
+
+  
+
+    Remark 2.1.13 (Informal) One interesting feature about the natural numbers is that while each individual natural number is finite, the set of natural numbers is infinite; i.e., \(\mathbf{N}\) is infinite but consists of individually finite elements. (The whole is greater than any of its parts.) There are no infinite natural numbers; one can even prove this using Axiom 2.5, provided one is comfortable with the notions of finite and infinite. (Clearly 0 is finite. Also, if \(n\) is {{c2::finite}}, then clearly {{c3::\(n++\)}} is {{c1::also finite}}. Hence by Axiom 2.5 , {{c2::all}} natural numbers are {{c2::finite}}.) So the natural numbers can {{c4::approach}} infinity, but never actually reach it; infinity is {{c5::not one of the natural numbers}}. (There are other number systems which admit "infinite" numbers, such as the cardinals, ordinals, and \(p\)-adics, but they do not obey the {{c5::principle of induction}}, and in any event are beyond the scope of this text.)
+
+============================================================
+
+  
+
+    Proposition 2.1.16 ({{c4::Recursive}} definitions). Suppose for each natural number \(n\), we have some function \(f_n:\) {{c5::\(\mathbf{N} \rightarrow \mathbf{N}\)}}. Let \(c\) be a natural number. Then we can assign a {{c3::unique}} natural number \(a_n\) to each natural number \(n\), such that {{c2::\(a_0\)}} = {{c1::\(c\)}} and {{c1::\(a_{n++}\)}} = {{c2::\(f_n\left(a_n\right)\)}} for each natural number \(n\).
+
+============================================================
+
+  
+
+    Proposition 2.1.16 (Recursive definitions). Suppose for each natural number \(n\), we have some function \(f_n: \mathbf{N} \rightarrow \mathbf{N}\) from the natural numbers to the natural numbers. Let c be a natural number. Then we can assign a unique natural number \(a_n\) to each natural number \(n\), such that \(a_0=c\) and \(a_{n++}=f_n\left(a_n\right)\) for each natural number \(n\).<br><br>Proof (Informal) We use induction. We first observe that this procedure gives a single value to \(a_0\), namely \(c\). (None of the other definitions \(a_{n++}:=f_n\left(a_n\right)\) will redefine the value of \(a_0\), because of Axiom 2.3.) Now suppose inductively that the procedure gives {{c3::a single value to \(a_n\)}}. Then it gives {{c4::a single value to \(a_{n++}\)}}, namely \(a_{n++}:=f_n\left(a_n\right)\). (None of the other definitions \(a_{m++}:=f_m\left(a_m\right)\) will {{c5::redefine}} the value of \(a_{n+1}\), because two natural numbers have {{c2::the same successor}} iff {{c1::they are equal}}.) This completes the induction, and so \(a_n\) is defined for each natural number \(n\), with a single value assigned to each \(a_n\).
+
+============================================================
+
+  
+
+    Definition 2.2.1 (Addition of natural numbers). Let \(m\) be a natural number. To add zero to \(m\), we define {{c1::\(0+m\)}}\(:=\){{c2::\(m\)}}. Now suppose inductively that we have defined how to {{c3::add \(n\) to \(m\)}}. Then we can add \(n++\) to \(m\) by defining {{c5::\((n++)+m\)}}\(:=\){{c4::\((n+m)++\).}}
+
+============================================================
+
+  
+
+    <ol><li>\(\text { Lemma 2.2.3 For any natural numbers }\) \(n \text { and } m\), {{c5::{{c1::\(n+(m++)\)}}}}={{c4::{{c2::\((n+m)\)}}}}{{c4::{{c3::\(++\)&nbsp;}}}}</li></ol>
+
+============================================================
+
+  
+
+    <div>Proposition 2.2.4 ({{c4::Addition}} is {{c3::commutative}}). For any natural numbers \(n\) and \(m\), {{c5::{{c1::\(n+m\)}}}}={{c5::{{c2::\(m+n\).}}}}<br></div>
+
+============================================================
+
+  
+
+    <div>Proposition 2.2.5 (Addition is {{c5::{{c3::associative}}}}). For any natural numbers \(a, b, c\), we have {{c4::{{c2::\((a+b)+c\)}}}}={{c4::{{c1::\(a+(b+c)\).}}}}<br></div>
+
+============================================================
+
+  
+
+    Proposition 2.2.6 ({{c5::{{c3::Cancellation}}}} law). Let \(a, b, c\) be natural numbers such that {{c4::{{c2::\(a+\) \(b\)}}}}={{c4::{{c1::\(a+c\)}}}}. Then we have {{c4::{{c1::\(b\)}}}}={{c4::{{c2::\(c\)}}}}.
+
+============================================================
+
+  
+
+    Proposition 2.2.8 If a is a {{c5::{{c2::positive}}}} natural number, and \(b\) is a natural number, then {{c4::{{c1::\(a+b\)}}}} is {{c4::{{c3::positive}}}}&nbsp;
+
+============================================================
+
+  
+
+    Corollary 2.2.9 If \(a\) and \(b\) are natural numbers such that {{c1::\(a+b\)}}={{c2::\(0\)}}, then {{c3::\(a\)}}={{c4::\(0\)}} {{c5::and}} {{c3::\(b\)}}={{c4::\(0\)}}.
+
+============================================================
+
+  
+
+    Lemma 2.2.10 Let a be a {{c3::positive}} number. Then there exists {{c1::exactly one}} natural number \(b\) such that {{c5::{{c2::\(b++\)}}}}={{c5::{{c4::\(a\).}}}}
+
+============================================================
+
+  
+
+    Definition 2.2.11 (Ordering of the natural numbers) Let \(n\) and \(m\) be natural numbers. We say that \(n\) is greater than or equal to \(m\), and write \(n \geq m\) or \(m \leq n\), iff we have \(n\)={{c1::\(m+a\)}} for {{c2::some natural number \(a\).}} We say that \(n\) is {{c3::strictly greater}} than \(m\), and write \(n&gt;m\) or \(m&lt;n\), iff \(n\) {{c5::\(\geq m\)}} and \(n\) {{c4::\(\neq m\).}}
+
+============================================================
+
+  
+
+    Thus for instance \(8&gt;5\), because \(8=5+3\) and \(8 \neq 5\). Also note that \(n++&gt;n\) for any \(n\); thus there is no {{c5::{{c1::largest natural number \(n\)}}}}, because the {{c4::{{c2::next number \(n++\)}}}} is always {{c4::{{c3::larger still.}}}}
+
+============================================================
+
+  
+
+    <li><br class="Apple-interchange-newline">Proposition 2.2.12 (Basic properties of order for natural numbers). Let \(a, b, c\) be natural numbers. Then</li><li>(a) (Order is {{c1::reflexive}}) {{c3::\(a \geq a\).}}</li><li>(b) (Order is {{c2::transitive}}) If {{c1::\(a \geq b\)}} and {{c1::\(b \geq c\)}}, then {{c3::\(a \geq c\).}}</li><li>(c) (Order is {{c3::antisymmetric}}) If {{c2::\(a \geq b\)}} and {{c2::\(b \geq a\)}}, then {{c1::\(a=b\).}}</li><li>(d) ({{c4::Addition}} preserves order) \(a \geq b\) if and only if {{c4::\(a+c \geq b+c\)}}.</li><li>(e) \(a&lt;b\) if and only if {{c5::\(a+1 \leq b\)}}.</li><li>(f) \(a&lt;b\) if and only if {{c5::\(b=a+d\)}} for some positive number \(d\).</li>
+
+============================================================
+
+  
+
+    Proposition 2.2.14 (Strong principle of induction). Let \(m_0\) be a natural number, and let \(P(m)\) be a property pertaining to an arbitrary natural number \(m\). Suppose that for each \(m \geq m_0\), we have the following implication: if {{c3::\(P\left(m^{\prime}\right)\)}} is true for all natural numbers {{c1::\(m_0 \leq\)}} \(m^{\prime}\){{c1::\(&lt;m\)}}, then \(P(m)\) is {{c5::{{c2::also true.}}}} (In particular, this means that \(P\left(m_0\right)\) is true, since in this case the hypothesis is vacuous.) Then we can conclude that \(P(m)\) is true for all natural numbers \(m\) {{c5::{{c4::\(\geq m_0\).}}}}
+
+============================================================
+
+  
+
+    Definition 2.3.1 (Multiplication of natural numbers). Let \(m\) be a natural number. To multiply zero to \(m\), we define {{c3::\(0 \times m\)}}\(:=\){{c4::\(0\)}}. Now suppose inductively that we have defined {{c5::how to multiply \(n\) to \(m\)}}. Then we can multiply \(n++\) to \(m\) by defining {{c2::\((n++) \times m\)}}\(:=\){{c1::\((n \times m)+m\).}}
+
+============================================================
+
+  
+
+    Lemma 2.3.2 (Multiplication is {{c5::{{c3::commutative}}}}). Let \(n, m\) be natural numbers. Then {{c4::{{c1::\(n \times m\)}}}}={{c4::{{c2::\(m \times n\)}}}}.
+
+============================================================
+
+  
+
+    Lemma 2.3.3 (Positive natural numbers have no {{c1::zero}} {{c2::divisors}}). Let \(n\), \(m\) be natural numbers. Then {{c3::\(n \times m\)}}={{c1::\(0\)}} if and only if {{c5::at least one}} of \(n, m\) is {{c5::equal}} to {{c1::zero}}. In particular, if \(n\) and \(m\) are both {{c4::positive}}, then \(n m\) is also {{c4::positive.}}
+
+============================================================
+
+  
+
+    Proposition 2.3.4 ({{c5::Distributive}} law). For any natural numbers \(a, b, c\), we have {{c1::\(a(b+c)\)}}={{c3::\(a b+a c\)}} and {{c2::\((b+c) a\)}}={{c4::\(b a+c a\)}}.
+
+============================================================
+
+  
+
+    Proposition 2.3.6 (Multiplication preserves {{c5::order}}). If \(a, b\) are natural numbers such that {{c3::\(a\)}}{{c4::&lt;}}{{c2::\(b\)}}, and \(c\) is {{c1::positive}}, then {{c2::\(a c\)}}{{c4::&lt;}}{{c3::\(b c\)}}.
+
+============================================================
+
+  
+
+    Corollary 2.3.7 ({{c4::Cancellation}} law). Let \(a, b, c\) be natural numbers such that {{c1::\(a c\)}}\(=\){{c5::{{c2::\(b c\)}}}} and \(c\) is {{c5::{{c3::non-zero}}}}. Then {{c5::{{c2::\(a\)}}}}={{c1::\(b\)}}.
+
+============================================================
+
+  
+
+    Proposition 2.3.9 (Euclid's {{c5::division}} lemma). Let n be a natural number, and let \(q\) be a {{c4::positive}} number. Then there exist natural numbers \(m, r\) such that {{c5::\(0\) \(\leq\)}} \(r\) {{c5::\(&lt;\)\(q\)}} and \(n\)={{c1::\(m q\)}}{{c3::\(+\)}}{{c2::\(r\)}}
+
+============================================================
+
+  
+
+    Definition 2.3.11 (Exponentiation for natural numbers). Let \(m\) be a natural number. To raise \(m\) to the power {{c5::0}} , we define {{c5::\(m^0\)}}\(:=\){{c5::\(1\)}}; in particular, we define {{c1::\(0^0\)}}\(:=\){{c2::\(1\)}}. Now suppose recursively that {{c3::\(m^n\)}} has been defined for {{c4::some natural number \(n\)}}, then we define {{c2::\(m^{n++}\)}}\(:=\){{c1::\(m^n \times m\).}}
+
+============================================================
+
+  
+
+    Definition 3.1.1 (Informal) We define a set \(A\) to be any {{c1::unordered}} {{c2::collection}} of objects, e.g., \(\{3,8,5,2\}\) is a set. If \(x\) is an object, we say that \(x\) is an {{c3::element of&nbsp;\(A\)}} or \(x\) {{c4::\(\in A\)}} if \(x\) lies {{c5::in the collection}}; otherwise we say that \(x\) {{c4::\(\notin A\)}}.&nbsp;
+
+============================================================
+
+  
+
+    Axiom 3.1 (Sets are {{c5::{{c1::objects}}}}). If \(A\) is a set, then \(A\) is {{c4::{{c2::also an object}}}}. In particular, given two sets \(A\) and \(B\), it is meaningful to ask whether \(A\) is {{c4::{{c2::also}}}} an {{c4::{{c3::element of \(B\).}}}}
+
+============================================================
+
+  
+
+    Remark 3.1.3 There is a special case of set theory, called "pure set theory", in which all objects are sets; for instance the number 0 might be identified with the {{c1::empty set \(\emptyset=\{ \}\)}}, the number 1 might be identified with {{c2::\(\{0\}\)}}={{c2::\(\{\{ \}\}\)}}, the number 2 might be identified with {{c3::\(\{0,1\}\)}}={{c2::\(\{\{ \},\{\{ \}\}\}\)}}, and so forth. From a logical point of view, pure set theory is a simpler theory, since one only has to deal with sets and not with {{c4::objects}}; however, from a conceptual point of view it is often easier to deal with impure set theories in which some {{c4::objects}} are not considered to be sets. The two types of theories are more or less equivalent for the purposes of doing mathematics, and so we shall take an agnostic position as to whether all objects are sets or not. For instance, we do not insist that a natural number such as 3 be identified with a set as indicated above. (The more accurate and mathematically useful statement is that natural numbers can be the {{c5::cardinalities of sets}}, rather than necessarily being sets themselves. See Sect. 3.6.)
+
+============================================================
+
+  
+
+    To summarize so far, among all the objects studied in mathematics, some of the objects happen to be sets; and if \(x\) is an {{c1::object}} and \(A\) is a set, then either {{c2::\(x \in A\)}} is true or {{c2::\(x \in A\)}} is false. (If \(A\) is not a set, we leave the statement {{c2::\(x \in A\)}} {{c3::undefined}}; for instance, we consider the statement \(3 \in 4\) to {{c4::neither be true or false}}, but simply {{c3::meaningless}}, since 4 is {{c5::not a set}}.)
+
+============================================================
+
+  
+
+    Axiom 3.2 (Equality of sets). Two sets \(A\) and \(B\) are equal, \(A=B\), iff {{c2::every element of \(A\)}} is {{c1::an element of \(B\)}} and vice versa. To put it another way, \(A=B\) if and only if {{c5::{{c3::every element \(x\) of \(A\)}}}} {{c5::{{c4::belongs also to \(B\)}}}}, and {{c5::{{c4::every element \(y\) of \(B\)}}}} {{c5::{{c3::belongs also to \(A\).}}}}
+
+============================================================
+
+  
+
+    ({{c5::Substitution}} axiom). Given any two objects \(x\) and \(y\) of the same {{c5::type}}, if {{c2::\(x\)}}{{c3::=}}{{c1::\(y\)}}, then {{c1::\(f(x)\)}}{{c3::=}}{{c2::\(f(y)\)}} for {{c4::all functions}} or {{c4::operations \(f\)}}. Similarly, for any property \(P(x)\) depending on \(x\), if {{c2::\(x\)}}{{c3::=}}{{c1::\(y\)}}, then {{c1::\(P(x)\)}} and {{c2::\(P(y)\)}} are {{c5::equivalent statements}}.
+
+============================================================
+
+  
+
+    The "is an element of" relation \(\in\) obeys the axiom of {{c1::substitution}} (see Section A.7). Because of this, any {{c2::new operation}} we {{c2::define on sets}} will also obey the axiom of {{c1::substitution}}, as long as we can define that operation purely in terms of the relation {{c3::\(\epsilon\)}}. This is for instance the case for the remaining definitions in this section. (On the other hand, we cannot use the notion of the "{{c4::first}}" or "{{c4::last}}" element in a set in a {{c5::well-defined}} manner, because this would not respect the axiom of {{c1::substitution}}; for instance the sets \(\{1,2,3,4,5\}\) and \(\{3,4,2,1,5\}\) are the same set, but have different {{c4::first}} elements.)
+
+============================================================
+
+  
+
+    Axiom 3.3 ({{c4::Empty}} set). There exists a set {{c3::\(\emptyset\)}}, known as the {{c4::empty}} set, which contains {{c1::no elements}}, i.e., for {{c5::every object \(x\)}} we have {{c5::\(x\)}} {{c2::\(\notin\)}} {{c3::\(\varnothing\).}}
+
+============================================================
+
+  
+
+    The empty set is also denoted {{c1::\(\}\)}}. Note that there can {{c2::only be one empty set}}; if there were two sets \(\emptyset\) and \(\emptyset^{\prime}\) which were {{c4::both empty}}, then by they would be {{c5::equal to each other}} because they {{c3::have the same elements.}}
+
+============================================================
+
+  
+
+    If a set is {{c5::{{c3::not equal}}}} to the {{c4::{{c2::empty}}}} set, we call it {{c4::{{c1::non-empty}}}}.&nbsp;
+
+============================================================
+
+  
+
+    Lemma 3.1.5 ({{c3::Single}} {{c5::choice}}). Let {{c5::A}} be a {{c2::non-empty}} set. Then there exists an {{c4::object \(x\)}} such that {{c4::\(x\)}} {{c1::\(\in\)}} {{c2::\(A\)}}.
+
+============================================================
+
+  
+
+    Lemma 3.1.5 (Single choice). Let A be a non-empty set. Then there exists an object \(x\) such that \(x \in A\).<br><br>Proof We prove by contradiction. Suppose there does not exist any object \(x\) such that \(x\) \(\in A\). Then for all objects \(x\), we have \(x\) {{c1::\(\notin A\)}}. Also, by the {{c4::empty set}} axiom we have \(x\) {{c2::\(\notin \emptyset\)}}. Thus \(x\) {{c5::\(\in A\)}} \(\Longleftrightarrow\) \(x\) {{c5::\(\in \emptyset\)}} (both statements are {{c5::equally false}}), and so \(A\)={{c3::\(\emptyset\)}} by {{c4::equality}} axiom, a contradiction.
+
+============================================================
+
+  
+
+    Lemma 3.1.5 (Single choice). Let A be a non-empty set. Then there exists an object \(x\) such that \(x \in A\).<br><br>Remark 3.1.6 The above Lemma asserts that given any non-empty set \(A\), we are allowed to "{{c1::choose}}" an element \(x\) of \(A\) which {{c2::demonstrates this non-emptyness}}. Later on (in Lemma 3.5.11) we will show that given any finite number of non-empty sets, say \(A_1, \ldots, A_n\), it is possible to {{c1::choose}} {{c3::one element \(x_1, \ldots, x_n\)}} from {{c4::each set \(A_1, \ldots, A_n\)}}; this is known as "{{c5::finite}} {{c1::choice}}". However, in order to choose elements from an infinite number of sets, we need an additional axiom, the axiom of {{c1::choice}}
+
+============================================================
+
+  
+
+    Remark 3.1.7 Note that the {{c3::empty set}} is not necessarily the same thing as the {{c4::natural number 0}} . One is a {{c4::set}}; the other is a {{c3::number}}. However, it is true that the {{c5::{{c2::cardinality}}}} of the {{c3::empty set}} is {{c5::{{c1::0}}}} ; see Sect.3.6.
+
+============================================================
+
+  
+
+    Axiom 3.4 ({{c1::Singleton}} sets). <br><ol><li>If \(a\) is an object, then there exists {{c3::a set \(\{a\}\)}} {{c5::{{c4::whose only element is \(a\)}}}}, i.e., for every object \(y\), we have \(y\) {{c5::{{c4::\(\in\{a\}\)}}}} if and only if {{c5::{{c5::\(y\)}}}}={{c5::{{c5::\(a\)}}}}; we refer to \(\{a\}\) as the {{c1::singleton}} set whose element is \(a\).&nbsp;</li></ol>
+
+============================================================
+
+  
+
+    <ol><li>Furthermore, if \(a\) and \(b\) are objects, then there exists a set {{c4::\(\{a, b\}\)}} whose {{c5::only elements}} are {{c3::\(a\)}} and {{c3::\(b\)}}; i.e., for every object \(y\), we have \(y\) \(\in\){{c4::\(\{a, b\}\)}} if and only if {{c1::\(y\)}}={{c2::\(a\)}} or {{c2::\(y\)}}={{c1::\(b\)}}; we refer to this set as the {{c1::pair}} set formed by {{c3::\(a\)}} and {{c3::\(b\).}}</li></ol>
+
+============================================================
+
+  
+
+    <div><ol><li>Remarks 3.1.8 Just as there is only one empty set, there is {{c1::only one}} {{c4::singleton}} set for each object \(a\), thanks to the axiom of {{c2::equality}}. Similarly, given any two objects \(a\) and \(b\), there is {{c1::only one}} {{c3::pair}} set formed by \(a\) and \(b\). The axiom of {{c2::equality}} also ensures that \(\{a, b\}=\{b, a\}\) (why?) and \(\{a, a\}=\{a\}\) (why?).&nbsp;</li><li>Thus the {{c4::singleton}} set axiom is in fact {{c5::redundant}}, being a consequence of the {{c3::pair}} set axiom. Conversely, the {{c3::pair}} set axiom will follow from the singleton set axiom and the {{c5::pairwise union}} axiom below&nbsp;</li></ol></div>
+
+============================================================
+
+  
+
+    Lemma 3.1.12 If \(a\) and \(b\) are objects, then \(\{a, b\}\)={{c1::\(\{a\} \cup\{b\}\)}}. If \(A, B, C\) are sets, then the union operation is {{c1::commutative}} and {{c2::associative}}. Also, we have {{c3::\(A\)}} \(\cup\) {{c3::\(A\)}}={{c3::\(A\)}} \(\cup\) {{c4::\(\emptyset\)}}={{c4::\(\emptyset\)}} \(\cup\) {{c3::\(A\)}}={{c5::\(A\)}}.
+
+============================================================
+
+  
+
+    Remark 3.1.15 Because these definitions involve only the notions of {{c5::equality}} and the "{{c5::is an element of}}" relation, both of which already obey the axiom of {{c1::substitution}}, the notion of subset also automatically obeys the axiom of {{c1::substitution}}. Thus for instance if \(A \subseteq B\) and \(A=A^{\prime}\), then {{c2::\(A^{\prime}\)}} {{c3::\(\subseteq\)}} {{c4::\(B\).}}
+
+============================================================
+
+  
+
+    Proposition 3.1.17 (Sets are {{c5::partially ordered}} by {{c2::set inclusion}}). Let \(A, B, C\) be sets. If \(A\) {{c2::\(\subseteq\)}} \(B\) and \(B\) {{c2::\(\subseteq\)}} \(C\) then \(A\) {{c2::\(\subseteq\)}} {{c1::\(C\)}}. If \(A\) {{c2::\(\subseteq\)}} \(B\) and \(B\) {{c2::\(\subseteq\)}} \(A\), then \(A\){{c4::=}}{{c4::\(B\)}}. Finally, if \(A \){{c3::\(\subsetneq\)}} \(B\) and \(B\) {{c3::\(\subsetneq\)}} \(C\) then \(A\) {{c3::\(\subsetneq\)}} {{c1::\(C\)}}.
+
+============================================================
+
+  
+
+    \(\text { Prove the identity }\){{c5::{{c1::\((a+b)^2\)}}}}={{c4::{{c2::\(a^2\)\(+\)\(2 a b\)\(+\)\(b^2\)}}}} for {{c4::{{c3::\(\text { all natural numbers } a, b \text {. }\)}}}}
+
+============================================================
+
+  
+
+    Remark 3.1.19 There is one important difference between the subset relation \(\subsetneq\) and the less than relation \(&lt;\). Given any two distinct natural numbers \(n, m\), we know that {{c5::one of them is smaller than the other}} (Proposition 2.2.13); however, given two distinct sets, {{c5::it is not in general true}} that {{c4::one of them is a subset of the other}}. This is why we say that sets are only {{c1::partially}} {{c3::ordered}}, whereas the natural numbers are {{c2::totally}} {{c3::ordered}}&nbsp;
+
+============================================================
+
+  
+
+    Axiom 3.6 (Axiom of {{c5::specification}}). Let \(A\) be a set, and for each \(x \in A\), let \(P(x)\) be a {{c4::property pertaining to \(x\)}} (i.e., for each \(x \in A, P(x)\) is either a true statement or a false statement). Then there exists a set, called {{c1::\(\{x \in A: P(x)\) is true \(\}\)}} (or simply {{c1::\(\{x \in A: P(x)\}\)}} for short), whose elements are {{c3::precisely the elements \(x\) in \(A\)}} {{c2::for which \(P(x)\) is true}}. In other words, for any object \(y\),<br><br><ol><li>{{c1::\(y \in\{x \in A: P(x) \text { is true }\}\)}} \(\Longleftrightarrow\) {{c2::\((y \in A \text { and } P(y) \text { is true }) .\)}}</li></ol><br><br>This axiom is also known as the axiom of {{c5::separation}}.<br>
+
+============================================================
+
+  
+
+    Two sets \(A, B\) are said to be {{c3::disjoint}} if {{c2::\(A \cap B\)}}={{c1::\(\emptyset\).}} Note that this is not the same concept as being {{c4::distinct}}, \(A \neq B\). For instance, the sets \(\{1,2,3\}\) and \(\{2,3,4\}\) are {{c4::distinct}} but not {{c3::disjoint}} Meanwhile, the sets {{c5::\(\emptyset\)}} and {{c1::\(\emptyset\)}} are {{c3::disjoint}} but not {{c4::distinct}} (why?).
+
+============================================================
+
+  
+
+    Definition 3.1.26 ({{c5::Difference}} sets). Given two sets \(A\) and \(B\), we define the set {{c5::\(A-B\)}} or {{c1::\(A \backslash B\)}} to be the set \(A\) with any elements of \(B\) removed:<br><br><ol><li>{{c2::\(A \backslash B\)}}\(:=\){{c1::\(\{x \in A: x \notin B\}\)}}</li></ol><br>In many cases \(B\) will be a {{c3::subset of \(A\)}}, {{c4::but not necessarily.}}<br>
+
+============================================================
+
+  
+
+    Proposition 3.1.27 (Sets form a boolean algebra). Let \(A, B, C\) be sets, and let \(X\) be a set containing \(A, B, C\) as subsets.<br><ol><li>(a) ({{c5::Minimal}} element) We have {{c1::\(A \cup \emptyset\)}}={{c2::\(A\)}} and {{c2::\(A \cap \emptyset\)}}={{c1::\(\emptyset\).}}</li><li>(b) ({{c5::Maximal}} element) We have {{c3::\(A \cup X\)}}={{c4::\(X\)}} and {{c4::\(A \cap X\)}}={{c3::\(A\).}}</li></ol>
+
+============================================================
+
+  
+
+    Proposition 3.1.27 (Sets form a boolean algebra). Let \(A, B, C\) be sets, and let \(X\) be a set containing \(A, B, C\) as subsets.<br><ol><li>(c) ({{c5::Identity}}) We have {{c1::\(A \cap A\)}}={{c2::\(A\)}} and {{c2::\(A \cup A\)}}={{c1::\(A\).}}<br>(d) ({{c5::Commutativity}}) We have {{c3::\(A \cup B\)}}={{c4::\(B \cup A\)}} and {{c4::\(A \cap B\)}}={{c3::\(B \cap A\).}}<br></li></ol>
+
+============================================================
+
+  
+
+    Proposition 3.1.27 (Sets form a boolean algebra). Let \(A, B, C\) be sets, and let \(X\) be a set containing \(A, B, C\) as subsets.<br><ol><li>(e) ({{c5::Associativity}}) We have {{c1::\((A \cup B) \cup C\)}}={{c2::\(A \cup(B \cup C)\)}} and {{c2::\((A \cap B) \cap C\)}}={{c1::\(A \cap\) ( \(B \cap C\) ).}}</li><li>(f) ({{c5::Distributivity}}) We have {{c3::\(A \cap(B \cup C)\)}}={{c4::\((A \cap B) \cup(A \cap C)\)}} and {{c4::\(A \cup(B \cap C)\)}}= {{c3::\((A \cup B) \cap(A \cup C)\).}}<br></li></ol>
+
+============================================================
+
+  
+
+    Proposition 3.1.27 (Sets form a boolean algebra). Let \(A, B, C\) be sets, and let \(X\) be a set containing \(A, B, C\) as subsets.<br><ol><li>(g) ({{c5::Partition}}) We have {{c1::\(A \cup(X \backslash A)\)}}={{c2::\(X\)}} and {{c2::\(A \cap(X \backslash A)\)}}={{c1::\(\emptyset\).}}</li><li>(h) ({{c5::De Morgan laws}}) We have {{c3::\(X \backslash(A \cup B)\)}}={{c4::\((X \backslash A) \cap(X \backslash B)\)}} and {{c4::\(X \backslash(A \cap B)\)}} = {{c3::\((X \backslash A) \cup(X \backslash B)\).}}<br></li></ol>
+
+============================================================
+
+  
+
+    <div>Proposition 3.1.27 (Sets form a {{c4::boolean algebra}}). Let \(A, B, C\) be sets, and let {{c3::\(X\)}} be a set {{c5::{{c1::containing}}}} {{c5::{{c2::\(A, B, C\) as subsets}}}}.<br>(a) (Minimal element) We have \(A \cup \emptyset=A\) and \(A \cap \emptyset=\emptyset\).<br>(b) (Maximal element) We have \(A \cup X=X\) and \(A \cap X=A\).<br>(c) (Identity) We have \(A \cap A=A\) and \(A \cup A=A\).<br>(d) (Commutativity) We have \(A \cup B=B \cup A\) and \(A \cap B=B \cap A\).<br>(e) (Associativity) We have \((A \cup B) \cup C=A \cup(B \cup C)\) and \((A \cap B) \cap C=A \cap\) ( \(B \cap C\) ).<br>(f) (Distributivity) We have \(A \cap(B \cup C)=(A \cap B) \cup(A \cap C)\) and \(A \cup(B \cap C)=\) \((A \cup B) \cap(A \cup C)\).<br>(g) (Partition) We have \(A \cup(X \backslash A)=X\) and \(A \cap(X \backslash A)=\emptyset\).<br>(h) (De Morgan laws) We have \(X \backslash(A \cup B)=(X \backslash A) \cap(X \backslash B)\) and \(X \backslash(A \cap B)=\) \((X \backslash A) \cup(X \backslash B)\)<br></div>
+
+============================================================
+
+  
+
+    <div>Remark 3.1.29 The reader may observe a certain symmetry in the above laws between {{c2::\(\cup\)}} and {{c3::\(\cap\)}}, and between {{c3::\(X\)}} and {{c2::\(\emptyset\)}}. This is an example of {{c4::duality}}-two distinct properties or objects being dual to each other. In this case, the {{c4::duality}} is manifested by the {{c5::complementation}} relation \(A \)\(\mapsto\) {{c1::\(X \backslash A\)}}; the de Morgan laws assert that this relation converts {{c2::unions}} into {{c3::intersections}} and vice versa. (It also interchanges {{c3::\(X\)}} and {{c2::the empty set}}.)&nbsp;<br></div>
+
+============================================================
+
+  
+
+    Axiom 3.7 ({{c4::Replacement}}). Let \(A\) be a set. For any object \(x \in A\), and any object \(y\), suppose we have a statement \(P(x, y)\) pertaining to \(x\) and \(y\), such that for each \(x \in A\) there is {{c3::at most one}} \(y\) for which {{c5::\(P(x, y)\) is true}}. Then there exists a set {{c2::\(\{y: P(x, y)\) is true for some \(x \in A\}\)}}, such that for any object \(z\),<br><br><ul><li>{{c2::\(z \in\{y: P(x, y) \text { is true for some } x \in A\} \)}}<br></li><li>\(\Longleftrightarrow\) {{c1::\(P(x, z) \text { is true for some } x \in A&nbsp; \)}}</li></ul>
+
+============================================================
+
+  
+
+    We often abbreviate a set of the form<br><br>{{c5::{{c1::\[<br>\{y: y=f(x) \text { for some } x \in A\}<br>\]}}}}<br><br>as {{c4::{{c2::\(\{f(x): x \in A\}\)}}}} or {{c4::{{c3::\(\{f(x) \mid x \in A\}\)}}}}.&nbsp;
+
+============================================================
+
+  
+
+    Axiom 3.8 ({{c1::Infinity}}). There exists a set {{c4::\(\mathbf{N}\)}}, whose elements are called {{c2::natural numbers}}, as well as an object {{c3::0}} in {{c4::\(\mathbf{N}\)}}, and an object {{c5::\(n++\)}} assigned to {{c4::every natural number \(n \in \mathbf{N}\),}} such that the {{c1::Peano}} axioms hold.
+
+============================================================
+
+  
+
+    Example 3.1.32 (Informal) This example requires the notion of subtraction, which has not yet been formally introduced. The following two sets are equal,<br><br>\[<br>\{n+3: n \in \mathbf{N}, 0 \leq n \leq 5\}=\{8-n: n \in \mathbf{N}, 0 \leq n \leq 5\}<br>\]<br><br>(see below), even though the expressions \(n+3\) and \(8-n\) are never equal to each other for any natural number \(n\). Thus, it is a good idea to remember to use those curly braces \(\}\) when you talk about sets, lest you accidentally confuse a set with its elements. One reason for this counterintuitive situation is that the letter \(n\) is being used in two different ways on the two sides of (3.1). To clarify the situation, let us rewrite the set \(\{8-n: n \in \mathbf{N}, 0 \leq n \leq 5\}\) by replacing the letter \(n\) by the letter \(m\), thus giving \(\{8-m: m \in \mathbf{N}, 0 \leq m \leq 5\}\). This is exactly the same set as before (why?), so we can rewrite (3.1) as<br><br><ol><li>{{c5::{{c2::\(\{n+3: n \in \mathbf{N}, 0 \leq n \leq 5\}\)}}}}={{c4::{{c1::\(\{8-m: m \in \mathbf{N}, 0 \leq m \leq 5\} .\)}}}}</li></ol><div>Now it is easy to see (using Axiom 3.2) why this identity is true: every number of the form \(n+3\), where \(n\) is a natural number between 0 and 5 , is also of the form \(8-m\) where \(m:=5-n\) (note that \(m\) is therefore also a natural number between 0 and 5); conversely, every number of the form \(8-m\), where \(m\) is a natural number between 0 and 5, is also of the form \(n+3\), where \(n:\)={{c4::{{c3::\(5-m\)}}}} (note that \(n\) is therefore a natural number between 0 and 5 ). Observe how much more confusing the above explanation of (3.1) would have been if we had not changed one of the \(n\) 's to an \(m\) first!<br></div>
+
+============================================================
+
+  
+
+    <div>Exercise 3.1.1 Let \(a, b, c, d\) be objects such that {{c3::\(\{a, b\}\)}}={{c4::\(\{c, d\}\).}} Show that at least one of the two statements " {{c5::{{c1::\(a=c\) and \(b=d\)}}}} " and " {{c5::{{c2::\(a=d\) and \(b=c\)}}}} " hold.<br></div>
+
+============================================================
+
+  
+
+    <div>Exercise 3.1.5 Let \(A, B\) be sets. Show that the three statements {{c1::\(A \subseteq B\)}}, {{c2::\(A \cup B\)=\(B\)}}, {{c3::\(A \cap B\)=\(A\)}} are {{c4::logically equivalent}} ({{c5::any one of them implies the other two::explanation}}).<br></div>
+
+============================================================
+
+  
+
+    <div>Exercise 3.1.7 Let \(A, B, C\) be sets. Show that {{c1::\(A \cap B\)}} \(\subseteq\) {{c2::\(A\)}} and {{c1::\(A \cap B\)}} \(\subseteq\) {{c2::\(B\)}}. Furthermore, show that \(C\) {{c4::\(\subseteq A\)}} and \(C\) {{c4::\(\subseteq B\)}} if and only if \(C \subseteq\) {{c3::\(A \cap B\)}}. In a similar spirit, show that \(A \subseteq\) {{c5::\(A \cup B\)}} and \(B \subseteq\) {{c4::\(A \cup B\)}}, and furthermore that \(A \subseteq C\) and \(B \subseteq C\) if and only if {{c5::\(A \cup B\)}} \(\subseteq C\).</div>
+
+============================================================
+
+  
+
+    Exercise 3.1.8 Let \(A, B\) be sets. Prove the absorption laws {{c5::{{c1::\(A \cap(A \cup B)\)}}}}={{c4::{{c3::\(A\)}}}} and {{c4::{{c2::\(A \cup(A \cap B)\)}}}}= {{c4::{{c3::\(A\)}}}}.
+
+============================================================
+
+  
+
+    Exercise 3.1.9 Let \(A, B, X\) be sets such that {{c3::\(A \cup B\)}}={{c4::\(X\)}} and {{c4::\(A \cap B\)}}={{c3::\(\emptyset\)}}. Show that {{c5::\(A\)}}={{c1::\(X \backslash B\)}} and {{c5::\(B\)}}={{c2::\(X \backslash A\).}}
+
+============================================================
+
+  
+
+    Exercise 3.1.10 Let \(A\) and \(B\) be sets. Show that the three sets {{c1::\(A \backslash B\)}},{{c2::\( A \cap B\)}}, and {{c3::\(B \backslash A\)}} are {{c5::disjoint}}, and that their union is {{c4::\(A \cup B\).}}
+
+============================================================
+
+  
+
+    Exercise 3.1.12 Suppose that \(A, B, A^{\prime}, B^{\prime}\) are sets such that \(A^{\prime}\) {{c5::\(\subseteq A\)}} and \(B^{\prime}\) {{c5::\(\subseteq B\)}}.<br><ol><li>(i) Show that {{c1::\(A^{\prime}\) \(\cup\) \(B^{\prime}\)}} \(\subseteq\) {{c2::\(A \cup B\)}} and {{c3::\(A^{\prime} \cap B^{\prime}\)}} \(\subseteq\) {{c4::\(A \cap B\).}}</li></ol>
+
+============================================================
+
+  
+
+    Exercise 3.1.13 Euclid famously defined a point to be "{{c1::that which has no part}}". This exercise should be reminiscent of that definition. Define a proper subset of a set \(A\) to be a subset \(B\) of \(A\) with \(B \neq A\). Let \(A\) be a non-empty set. Show that \(A\) does not have any {{c5::non-empty}} {{c4::proper subsets}} if and only if \(A\) is of the form \(A\)={{c2::\(\{x\}\)}} for {{c3::some object \(x\).}}
+
+============================================================
+
+  
+
+    The problem with an axiom of universal specification is that it creates sets which are far too "large"for instance, we can use that axiom to talk about the set of {{c1::all objects}} (a so-called universal set). Since sets are {{c2::themselves objects (Axiom 3.1)}}, this means that sets are allowed to {{c3::contain themselves}}, which is a somewhat silly state of affairs. One way to informally resolve this issue is to think of objects as being arranged in a hierarchy. At the bottom of the hierarchy are the {{c4::primitive objects-the objects that are not sets}}, \({ }^1\) such as the natural number 37 . Then on the next rung of the hierarchy there are {{c5::sets whose elements consist only of primitive objects}}, such as \(\{3,4,7\}\) or the empty set \(\emptyset\); let's call these "{{c5::primitive sets}}" for now. Then there are sets whose elements consist only of {{c5::primitive objects and primitive sets}}, such as \(\{3,4,7,\{3,4,7\}\}\). Then we can form sets out of these objects, and so forth. The point is that at each stage of the hierarchy we only see sets whose elements consist of {{c5::objects at lower stages of the hierarchy}}, and so at no stage do we ever construct a set which contains itself.<br>
+
+============================================================
+
+  
+
+    One way to informally resolve the issue of universal specification is to think of objects as being arranged in a hierarchy. At the bottom of the hierarchy are the {{c1::primitive objects-the objects that are not sets, \({ }^1\) such as the natural number 37}} . Then on the next rung of the hierarchy there are sets whose elements consist {{c2::only of primitive objects, such as \(\{3,4,7\}\) or the empty set \(\emptyset\)}}; let's call these "{{c2::primitive sets}}" for now. Then there are sets whose elements consist {{c3::only of primitive objects and primitive sets, such as \(\{3,4,7,\{3,4,7\}\}\)}}. Then we can form sets out of these objects, and so forth. The point is that at each stage of the hierarchy we only see sets whose elements consist of objects at {{c4::lower stages of the hierarchy}}, and so at no stage do we ever construct a set which {{c5::contains itself.}}
+
+============================================================
+
+  
+
+    Axiom 3.10 ({{c5::Regularity}}). If \(A\) is a {{c5::non-empty}} set, then there is {{c4::at least one}} element \(x\) of \(A\) which is {{c3::either}} {{c1::not a set}}, or is {{c2::disjoint from \(A\).}}
+
+============================================================
+
+  
+
+    Axiom 3.10 (Regularity). If \(A\) is a non-empty set, then there is at least one element \(x\) of \(A\) which is either not a set, or is disjoint from \(A\).<br><br>The point of this axiom (which is also known as the axiom of {{c1::foundation}}) is that it is asserting that at least one of the elements of \(A\) is so {{c2::low}} on the {{c3::hierarchy of objects}} that it {{c5::does not contain}} {{c4::any of the other elements of \(A\)}}. For instance, if \(A=\{\{3,4\},\{3,4,\{3,4\}\}\}\), then the element \(\{3,4\} \in A\) does not contain any of the elements of \(A\) (neither 3 nor 4 lies in \(A\) ), although the element \(\{3,4,\{3,4\}\}\), being somewhat higher in the hierarchy, does contain an element of \(A\), namely \(\{3,4\}\). One particular consequence of this axiom is that sets are no longer allowed to {{c5::contain themselves}} (Exercise 3.2.2).
+
+============================================================
+
+  
+
+    Functions are also referred to as {{c1::maps}} or {{c2::transformations}}, depending on the context. They are also sometimes called {{c3::morphisms}}, although to be more precise, a {{c3::morphism}} refers to a {{c4::more general class of object}}, which may or may not correspond to {{c5::actual functions}}, depending on the context.
+
+============================================================
+
+  
+
+    Remark 3.3.2 Implicit in the function definition is an assumption that whenever one is given two sets \(X, Y\) and a property \(P\) obeying the {{c1::vertical line}} test, one can form a function object \(f\). Strictly speaking, the assumption of the existence of such a function object \(f\) should be stated as an explicit axiom. However, we will not do so here, as it turns out to be redundant. (it is always possible to encode a function \(f\) as an {{c2::ordered triple \((X, Y,\{(x, f(x)): x \in X\})\)}} consisting of the {{c3::domain}}, {{c4::codomain}}, and {{c5::graph of the function}}, which gives a way to build functions as objects using the operations provided by the preceding axioms of set theory.) Also implicit in the above definition is the understanding that every function \(f\) is automatically associated with a {{c3::domain \(X\)}}, a {{c4::codomain \(Y\)}}, and a {{c5::defining property \(P\).}}
+
+============================================================
+
+  
+
+    Example 3.3.3 Let \(X=\mathbf{N}, Y=\mathbf{N}\), and let \(P(x, y)\) be the property that \(y\)={{c1::\(x++\).}} Then for each \(x \in \mathbf{N}\) there is exactly one \(y \in \mathbf{N}\) for which \(P(x, y)\) is true, namely\(y\)={{c1::\(x++\).}}. Thus we can define a function \(f: \mathbf{N} \rightarrow \mathbf{N}\) associated to this property, so that \(f(x)\)={{c2::\(x++\)}} for all \(x\); this is the {{c3::increment}} function on \(\mathbf{N}\), which takes a natural number as input and returns its {{c3::increment}} as output. One might also hope to define a {{c4::decrement}} function \(g: \mathbf{N} \rightarrow \mathbf{N}\) associated to the property \(P(x, y)\) defined by {{c5::\(y++\)}}={{c5::\(x\)}}, i.e., \(g(x)\) would be the number {{c5::whose increment is \(x\)}}. Unfortunately this does not define a function, because when \(x\)=\{{c5::(0\)}} there is no {{c5::natural number \(y\) whose increment is equal to \(x\) (Axiom 2.3).}}&nbsp;
+
+============================================================
+
+  
+
+    Example 3.3.4 (Informal) This example requires the real numbers \(\mathbf{R}\), which we will define in Chap. 5. One could try to define a square root function \(\sqrt{ }: \mathbf{R} \rightarrow \mathbf{R}\) by associating it to the property \(P(x, y)\) defined by \(y^2=x\), i.e., we would want \(\sqrt{x}\) to be the number \(y\) such that \(y^2=x\). Unfortunately there are two problems which prohibit this definition from actually creating a function. The first is that there exist real numbers \(x\) for which \(P(x, y)\) is never true, for instance if \(x\)={{c1::\(-1\)}} then there is no real number \(y\) such that \(y^2=x\). This problem however can be solved by restricting the domain from \(\mathbf{R}\) to {{c2::the right half-line \([0,+\infty)\)}}. The second problem is that even when {{c2::\(x \in[0,+\infty)\)}}, it is possible for there to be {{c3::more than one \(y\)}} in the codomain \(\mathbf{R}\) for which \(y^2=x\). This problem can however be solved by restricting the codomain of \(\mathbf{R}\) to {{c4::\([0,+\infty)\)}}. Once one does this, then one can correctly define a square root function \(\sqrt{ }:\) {{c2::\([0,+\infty)\)}} \(\rightarrow\) {{c4::\([0,+\infty)\)}} using the relation \(y^2=x\); thus \(\sqrt{x}\) is the {{c5::unique number}} \(y\) \(\in\) {{c2::\([0,+\infty)\)}} such that \(y^2=x\).
+
+============================================================
+
+  
+
+    One common way to define a function is simply to specify its {{c2::domain}}, its {{c3::codomain}}, and how one {{c5::{{c4::generates the output \(f(x)\)}}}} from {{c5::{{c4::each input}}}}; this is known as an {{c5::{{c1::explicit}}}} definition of a function.
+
+============================================================
+
+  
+
+    In other cases we only define a function \(f\) by specifying what {{c2::property \(P(x, y)\)}} links {{c3::the input \(x\)}} with {{c5::{{c4::the output \(f(x)\)}}}}; this is an {{c5::{{c1::implicit}}}} definition of a function.&nbsp;
+
+============================================================
+
+  
+
+    We observe that functions obey the axiom of {{c1::substitution}}: if {{c2::\(x\)}}={{c3::\(x^{\prime}\)}}, then {{c4::\(f(x)\)}} = {{c5::\(f\left(x^{\prime}\right)\)&nbsp;}}
+
+============================================================
+
+  
+
+    In many cases we omit specifying the domain and codomain of a function for brevity, and thus for instance we could refer to the function \(f\) in Example 3.3.3 as "the function {{c1::\(f(x):=\) \(x++\)}} ", "the function {{c2::\(x \mapsto x++\)}} ", "the function {{c5::{{c3::\(x++\)}}}} ", or even the extremely abbreviated " {{c5::{{c4::++}}}} ". However, too much of this abbreviation can be dangerous; sometimes it is important to know what the domain and codomain of the function is.
+
+============================================================
+
+  
+
+    Example 3.3.5 Let \(X=\mathbf{N}, Y=\mathbf{N}\), and let \(P(x, y)\) be the property that {{c2::\(y\)}}={{c2::\(7\)}}. Then certainly for every \(x \in \mathbf{N}\) there is exactly one \(y\) for which \(P(x, y)\) is true, namely {{c1::the number 7}}. Thus we can create a function \(f: \mathbf{N} \rightarrow \mathbf{N}\) associated to this property; it is simply the {{c3::constant}} function which assigns the output of \(f(x)\)={{c4::\(7\)}} to {{c5::each input \(x\) \(\in\) \(\mathbf{N}\)}}. Thus it is certainly possible for different inputs to generate {{c4::the same output.}}
+
+============================================================
+
+  
+
+    Sometimes the argument of a function is denoted by {{c1::subscripting}} instead of {{c2::parentheses}}; for instance, a {{c5::{{c3::sequence of natural numbers \(a_{0}, a_{1}, a_{2}, a_{3}, \ldots\)}}}} is, strictly speaking, a function from {{c5::{{c4::\(\mathbf{N}\)}}}} to {{c5::{{c4::\(\mathbf{N}\)}}}}, but is denoted by \(n \mapsto\) {{c1::\(a_{n}\)}} rather than \(n \mapsto\) {{c2::\(a(n)\).}}
+
+============================================================
+
+  
+
+    Remark 3.3.7 We do not {{c1::necessarily}} require functions to be sets, nor do we require sets to be functions. Thus, it does not {{c1::necessarily}} make sense to ask whether an object \(x\) is an element of a function \(f\), and it does not necessarily make sense to apply a set \(A\) to an input \(x\) to create an output \(A(x)\). On the other hand, it is permissible to start with a function \(f: X \rightarrow Y\) and construct its {{c2::\(\operatorname{graph}\)}}{{c3::\(\{(x, f(x)): x \in X\}\)}}, which describes the function completely once the {{c4::domain \(X\)}} and {{c5::codomain \(Y\)}} are specified:&nbsp;
+
+============================================================
+
+  
+
+    Definition 3.3.8 ({{c5::Equality}} of functions). Two functions \(f: X \rightarrow Y, g: X^{\prime} \rightarrow Y^{\prime}\) are said to be {{c5::equal}} if their {{c3::domains}} and {{c4::codomains}} agree (i.e., {{c3::\(X\)}}={{c3::\(X^{\prime}\)}} and {{c4::\(Y\)}}={{c4::\(Y^{\prime}\)}} ),&nbsp;and furthermore that {{c2::\(f(x)\)}}={{c1::\(g(x)\)}} for {{c3::all \(x \in X\)}}
+
+============================================================
+
+  
+
+    Remark 3.3.9 According to this definition, two functions that have different domains or different codomains are, strictly speaking, distinct functions. However, when it is safe to do so without causing confusion, it is sometimes useful to "abuse notation" by {{c5::identifying together functions}} of different {{c3::domains}} or {{c4::codomains}} if {{c1::their values agree on their common domain of definition}}; this is analogous to the practice of "{{c2::overloading}}" an operator in software engineering. See the discussion after Definition 9.4.1 for one instance of this.
+
+============================================================
+
+  
+
+    Example 3.3.10 (Informal) The functions \(x \mapsto x^{2}+2 x+1\) and \(x \mapsto(x+1)^{2}\) are equal on the domain {{c1::\(\mathbf{R}\)}}. The functions \(x \mapsto x\) and \(x \mapsto|x|\) are equal on the {{c2::positive real axis}}, but are {{c5::{{c3::not equal}}}} on {{c1::\(\mathbf{R}\)}}; thus the concept of equality of functions can depend on the {{c5::{{c4::choice of domain.}}}}
+
+============================================================
+
+  
+
+    One can provide a more explicit definition of a function in which Definition 3.3.8 becomes a theorem; for instance, one can define a function \(f: X \rightarrow Y\) to be an {{c1::ordered triple}} ({{c2::\(X\)}}, {{c3::\(Y\)}}, {{c4::\(G\)}} ) consisting of a {{c2::domain set \(X\)}}, a {{c3::codomain set \(Y\)}}, and a graph {{c4::\(G\)}}={{c5::\(\{(x, f(x)): x \in X\}\)}} that obeys the {{c5::vertical line test}} and use this latter graph to define the value of \(f(x) \in Y\) for each element \(x\) of the domain
+
+============================================================
+
+  
+
+    <br>Definition 3.3.13 (Composition). Let \(f: X \rightarrow Y\) and \(g: Y \rightarrow Z\) be two functions, such that the codomain of \(f\) is the same set as the domain of \(g\). We then define the&nbsp; composition \(g \circ f: X \rightarrow Z\) of the two functions \(g\) and \(f\) to be the function defined explicitly by the formula<br><ol><li>{{c4::\((g \circ f)(x)\)}}\(:=\){{c5::\(g(f(x))\)}}</li></ol><br>If the {{c1::codomain}} of \(f\) does not match the {{c2::domain}} of \(g\), we leave the composition \(g \circ f\) {{c3::undefined}}.<br>
+
+============================================================
+
+  
+
+    Lemma 3.3.15 (Composition is {{c5::{{c3::associative}}}}). Let \(f: Z \rightarrow W, g: Y \rightarrow Z\), and \(h: X \rightarrow Y\) be functions. Then {{c4::{{c1::\(f \circ(g \circ h)\)}}}}={{c4::{{c2::\((f \circ g) \circ h\).}}}}
+
+============================================================
+
+  
+
+    Lemma 3.3.15 (Composition is associative). Let \(f: Z \rightarrow W, g: Y \rightarrow Z\), and \(h: X \rightarrow Y\) be functions. Then \(f \circ(g \circ h)=(f \circ g) \circ h\).<br><br>Proof Since \(g \circ h\) is a function from \(X\) to \(Z, f \circ(g \circ h)\) is a function from \(X\) to \(W\). Similarly \(f \circ g\) is a function from \(Y\) to \(W\), and hence \((f \circ g) \circ h\) is a function from \(X\) to \(W\). Thus \(f \circ(g \circ h)\) and \((f \circ g) \circ h\) have the same domain and codomain. In order to check that they are equal, we see from Definition 3.3.8 that we have to verify that \((f \circ(g \circ h))(x)=((f \circ g) \circ h)(x)\) for all \(x \in X\). But by Definition 3.3.13<br><ol><li><br></li><li>{{c5::\((f \circ(g \circ h))(x)&nbsp;\)&nbsp;}}</li><li>= {{c1::\(f((g \circ h)(x))&nbsp;\)}}</li><li>= {{c2::\(f(g(h(x))&nbsp;\)}}</li><li>= {{c3::\((f \circ g)(h(x))&nbsp;\)}}</li><li>{{c4::= \(((f \circ g) \circ h)(x)\)}}</li></ol>as desired.<br>
+
+============================================================
+
+  
+
+    Definition 3.3.17 ({{c5::One-to-one}} functions). A function \(f\) is one-to-one (or injective) if different {{c1::elements}} {{c2::map to different elements:}}<br><ol><li>{{c1::\(x \neq x^{\prime} \)}} \(\Longrightarrow\) {{c2::\(f(x) \neq f\left(x^{\prime}\right)\)}}</li></ol><br>Equivalently, a function is one-to-one if<br><ol><li>{{c3::\(f(x)=f\left(x^{\prime}\right)\)}} \(\Longrightarrow\) {{c4::\(x=x^{\prime}\)}}</li></ol>
+
+============================================================
+
+  
+
+    Example 3.3.18 (Informal) The function \(f: \mathbf{Z} \rightarrow \mathbf{Z}\) defined by \(f(n):=n^{2}\) is not one-to-one because the distinct elements {{c1::\(-1,1\)}} map to the same element {{c2::1}} . On the other hand, if we restrict this function to the {{c3::natural numbers}}, defining the function \(g:\) {{c3::\(\mathbf{N}\)}} \(\rightarrow\) {{c4::\(\mathbf{Z}\)}} by \(g(n):=n^{2}\), then \(g\) is now a one-to-one function. Thus the notion of a one-to-one function depends not just on what the function does, but also what {{c5::its domain is.}}
+
+============================================================
+
+  
+
+    Remark 3.3.19 If a function \(f: X \rightarrow Y\) is {{c3::not}} {{c2::one-to-one}}, then one can find distinct \(x\) and \(x^{\prime}\) in the domain \(X\) such that \(f(x)=f\left(x^{\prime}\right)\), thus one can find {{c4::two inputs}} which map {{c5::to one output}}. Because of this, we say that \(f\) is {{c1::two-to-one}} instead of {{c2::one-to-one.}}
+
+============================================================
+
+  
+
+    <br>Example 3.3.21 (Informal) The function \(f: \mathbf{Z} \rightarrow \mathbf{Z}\) defined by \(f(n):=n^{2}\) is not {{c5::onto}} because the {{c1::negative numbers}} are not in the image of \(f\). However, if we restrict the codomain \(\mathbf{Z}\) to the set \(A\)\(:=\){{c2::\(\left\{n^{2}: n \in \mathbf{Z}\right\}\)}} of square numbers, then the function \(g:\) {{c3::\(\mathbf{Z}\)}} \(\rightarrow A\) defined by \(g(n):=n^{2}\) is now onto. Thus the notion of an {{c5::onto}} function depends not just on what the function does, but also what {{c4::its range is.}}
+
+============================================================
+
+  
+
+    <br>Remark 3.3.22 The concepts of {{c5::{{c2::injectivity}}}} and {{c4::{{c3::surjectivity}}}} are in many ways {{c4::{{c1::dual}}}} to each other
+
+============================================================
+
+  
+
+    Definition 3.3.23 ({{c1::Bijective}} functions). Functions \(f: X \rightarrow Y\) which are both {{c2::one-to-one}} and {{c5::{{c3::onto}}}} are also called {{c1::bijective}} or {{c5::{{c4::invertible}}}}.
+
+============================================================
+
+  
+
+    Example 3.3.25 The function \(f: \mathbf{N} \rightarrow\) {{c2::\(\mathbf{N} \backslash\{0\}\)}} defined by \(f(n):=\)\(n++\) is a {{c1::bijection}} On the other hand, the function \(g: \mathbf{N} \rightarrow\) {{c3::\(\mathbf{N}\)}} defined by the same definition \(g(n):=\)\(n++\) is {{c4::not}} a {{c1::bijection}}. Thus the notion of a bijective function depends not just on what the function {{c5::does}}, but also what its {{c5::domain}} and {{c5::codomain}} are.
+
+============================================================
+
+  
+
+    Remark 3.3.26 If a function \(x \mapsto f(x)\) is bijective, then we sometimes call \(f\) a {{c1::perfect}} {{c2::matching}} or a {{c3::one-to-one}} {{c4::correspondence}} (not to be confused with the notion of a {{c3::one-to-one}} function) and denote the action of \(f\) using the notation \(x \) {{c5::\(\leftrightarrow\)}} \(f(x)\) instead of \(x\) \(\mapsto\) \(f(x)\).&nbsp;
+
+============================================================
+
+  
+
+    If \(f\) is bijective, then for every \(y \in Y\), there is {{c3::exactly one \(x\)}} such that \(f(x)\)=\(y\) (there is {{c4::at least one}} because of surjectivity, and {{c5::at most one}} because of injectivity). This value of \(x\) is denoted {{c1::\(f^{-1}\)}}\((y)\); thus {{c1::\(f^{-1}\)}} is a function from \(Y\) to \(X\). We call {{c1::\(f^{-1}\)}} the i{{c2::nverse of \(f\).}}
+
+============================================================
+
+  
+
+    Function equality is {{c5::{{c1::reflexive}}}}, {{c4::{{c2::symmetric}}}} and {{c4::{{c3::transitive}}}} as a relation
+
+============================================================
+
+  
+
+    <div>A {{c3::partial}}&nbsp;{{c4::order}} relation must be&nbsp;{{c1::reflexive}}, {{c5::antisymmetric}}, and {{c5::transitive}}. &nbsp; They behave analogously to&nbsp;<span style="font-style: inherit; font-weight: inherit; color: inherit;"></span><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;"><span style="font-style: inherit; font-weight: inherit;">⩽</span></span><span style="font-style: inherit; font-weight: inherit;"></span></span></span><span style="font-style: inherit; font-weight: inherit;"></span></span>&nbsp;, which is conceptually useful.</div><div>A&nbsp;{{c4::strict}}&nbsp;{{c3::order}} relation must be {{c2::irreflexive}}, {{c5::antisymmetric}}, and {{c5::transitive}}.&nbsp;</div>
+
+============================================================
+
+  
+
+    Exercise 3.3.2 Let \(f: X \rightarrow Y\) and \(g: Y \rightarrow Z\) be functions. Show that if \(f\) and \(g\) are {{c3::both}} {{c1::injective}}, then so is {{c5::{{c4::\(g \circ f\)}}}}; similarly, show that if \(f\) and \(g\) are {{c3::both}} {{c5::{{c2::surjective}}}}, then so is {{c5::{{c4::\(g \circ f\).}}}}
+
+============================================================
+
+  
+
+    <br>Exercise 3.3.4 In this section we give some cancellation laws for composition. Let \(f: X \rightarrow Y\), \(\tilde{f}: X \rightarrow Y, g: Y \rightarrow Z\), and \(\tilde{g}: Y \rightarrow Z\) be functions. <br><ol><li>Show that if {{c2::\(g \circ f\)}}={{c3::\(g \circ \tilde{f}\)}} and \(g\) is {{c1::injective}}, then {{c3::\(f\)}}={{c2::\(\tilde{f}\).}}&nbsp;</li><li>Show that if {{c4::\(g \circ f\)}}={{c5::\(\tilde{g} \circ f\)}} and \(f\) is {{c1::surjective}}, then {{c5::\(g\)}}={{c4::\(\tilde{g}\)}}.</li></ol>
+
+============================================================
+
+  
+
+    <ol><li>Exercise 3.3.5 Let \(f: X \rightarrow Y\) and \(g: Y \rightarrow Z\) be functions.&nbsp;</li><li>Show that if {{c5::\(g \circ f\)}} is {{c1::injective}}, then {{c2::\(f\)}} must be {{c1::injective}}.&nbsp;&nbsp;</li><li>Show that if {{c5::\(g \circ f\)}} is {{c3::surjective}}, then {{c4::\(g\)}} must be {{c3::surjective}}.&nbsp;</li></ol>
+
+============================================================
+
+  
+
+    <div>Exercise 3.3.6 Let \(f: X \rightarrow Y\) be a bijective function, and let \(f^{-1}: Y \rightarrow X\) be its inverse. Verify the {{c3::cancellation}} laws {{c1::\(f^{-1}(f(x))\)}}={{c2::\(x\)}} for {{c5::all \(x \in X\)}} and {{c2::\(f\left(f^{-1}(y)\right)\)}}={{c1::\(y\)}} for {{c5::all \(y \in Y\).}} Conclude that \(f^{-1}\) is also {{c3::invertible}} and has {{c3::\(f\) as its inverse}} (thus {{c3::\(.(f^{-1})^{-1}\)}}={{c4::\(f)\).}})<br></div>
+
+============================================================
+
+  
+
+    <div>Exercise 3.3.7 Let \(f: X \rightarrow Y\) and \(g: Y \rightarrow Z\) be functions. Show that if \(f\) and \(g\) are {{c5::bijective}}, then so is {{c4::\(g \circ f\)}}, and we have {{c1::\((g \circ f)^{-1}\)}} = {{c2::\(f^{-1}\)}} {{c3::\(\circ\)}} {{c2::\(g^{-1}\)}}.<br></div>
+
+============================================================
+
+  
+
+    <div>Exercise 3.3.8 If \(X\) is a subset of \(Y\), let {{c1::\(\iota_{X \rightarrow Y}\)}} \(:\) {{c2::\(X \rightarrow Y\)}} be the {{c3::inclusion}} map from {{c2::\(X\)}} to {{c2::\(Y\)}}, defined by mapping \(x\) \(\mapsto\) {{c1::\(x\)}} for {{c2::all \(x \in X\)}}, i.e., {{c1::\(\iota_{X \rightarrow Y}\)}}\((x)\)\(:=\){{c1::\(x\)}} for {{c2::all \(x \in X\)}}. The map {{c4::\(\iota_{X \rightarrow X}\)}} is in particular called the {{c5::identity}} map on {{c5::\(X\).}}</div>
+
+============================================================
+
+  
+
+    Exercise 3.3.8 If \(X\) is a subset of \(Y\), let \(\iota_{X \rightarrow Y}: X \rightarrow Y\) be the inclusion map from \(X\) to \(Y\), defined by mapping \(x \mapsto x\) for all \(x \in X\), i.e., \(\iota_{X \rightarrow Y}(x):=x\) for all \(x \in X\). The map \(\iota_{X \rightarrow X}\) is in particular called the identity map on \(X\).<br><ol><li>&nbsp;Show that if \(X\) {{c4::\(\subseteq\)}} {{c5::\(Y\)}} {{c4::\(\subseteq\)}} {{c5::\(Z\)}} then {{c2::\(\iota_{Y \rightarrow Z}\)}} {{c3::\(\circ\)}} {{c2::\(\iota_{X \rightarrow Y}\)}}={{c1::\(\iota_{X \rightarrow Z}\).}}<br></li></ol>
+
+============================================================
+
+  
+
+    Exercise 3.3.8 If \(X\) is a subset of \(Y\), let \(\iota_{X \rightarrow Y}: X \rightarrow Y\) be the inclusion map from \(X\) to \(Y\), defined by mapping \(x \mapsto x\) for all \(x \in X\), i.e., \(\iota_{X \rightarrow Y}(x):=x\) for all \(x \in X\). The map \(\iota_{X \rightarrow X}\) is in particular called the identity map on \(X\).<br><ol><li>Show that if \(f: A \rightarrow B\) is {{c5::any function}}, then {{c5::\(f\)}}={{c1::\(f\)}} {{c4::\(\circ\)}} {{c2::\(\iota_{A \rightarrow A}\)}} = {{c3::\(\iota_{B \rightarrow B}\)}} {{c4::\(\circ\)}} {{c1::\(f\)}}.<br></li></ol>
+
+============================================================
+
+  
+
+    Exercise 3.3.8 If \(X\) is a subset of \(Y\), let \(\iota_{X \rightarrow Y}: X \rightarrow Y\) be the inclusion map from \(X\) to \(Y\), defined by mapping \(x \mapsto x\) for all \(x \in X\), i.e., \(\iota_{X \rightarrow Y}(x):=x\) for all \(x \in X\). The map \(\iota_{X \rightarrow X}\) is in particular called the identity map on \(X\).<br><ol><li>Show that, if \(f: A \rightarrow B\) is a {{c5::bijective}} function, then {{c4::\(f\)}} {{c5::\(\circ\)}} {{c3::\(f^{-1}\)}}={{c1::\(\iota_{B \rightarrow B}\)}} and {{c3::\(f^{-1}\)}} {{c5::\(\circ\)}} {{c4::\(f\)}}={{c2::\(\iota_{A \rightarrow A}\).}}</li></ol>
+
+============================================================
+
+  
+
+    Exercise 3.3.8 If \(X\) is a subset of \(Y\), let \(\iota_{X \rightarrow Y}: X \rightarrow Y\) be the inclusion map from \(X\) to \(Y\), defined by mapping \(x \mapsto x\) for all \(x \in X\), i.e., \(\iota_{X \rightarrow Y}(x):=x\) for all \(x \in X\). The map \(\iota_{X \rightarrow X}\) is in particular called the identity map on \(X\).<br><ol><li>Show that if \(X\) and \(Y\) are {{c1::disjoint}} sets, and \(f: X \rightarrow Z\) and \(g: Y \rightarrow Z\) are functions, then there is a {{c4::unique}} function \(h:\) \(X \cup Y \rightarrow Z\) such that {{c2::\(h \)}}{{c5::\(\circ\)}} {{c1::\(\iota_{X \rightarrow X \cup Y}\)}}={{c4::\(f\)}} and {{c2::\(h\)}} {{c5::\(\circ\)}} {{c3::\(\iota_{Y \rightarrow X \cup Y}\)}} = {{c4::\(g\)}}.<br></li></ol>
+
+============================================================
+
+  
+
+    Exercise 3.3.8 If \(X\) is a subset of \(Y\), let \(\iota_{X \rightarrow Y}: X \rightarrow Y\) be the inclusion map from \(X\) to \(Y\), defined by mapping \(x \mapsto x\) for all \(x \in X\), i.e., \(\iota_{X \rightarrow Y}(x):=x\) for all \(x \in X\). The map \(\iota_{X \rightarrow X}\) is in particular called the identity map on \(X\).<br><ol><li>(d) Show that if \(X\) and \(Y\) are disjoint sets, and \(f: X \rightarrow Z\) and \(g: Y \rightarrow Z\) are functions, then there is a unique function \(h: X \cup Y \rightarrow Z\) such that \(h \circ \iota_{X \rightarrow X \cup Y}=f\) and \(h \circ \iota_{Y \rightarrow X \cup Y}=g\).</li><li><br>(e) Show that the hypothesis that \(X\) and \(Y\) are {{c1::disjoint}} can be dropped in (d) if one adds the additional hypothesis that {{c3::\(f(x)\)}}={{c5::{{c4::\(g(x)\)}}}} for all \(x\) \(\in\) {{c5::{{c2::\(X \cap Y\).}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    Definition 3.4.1 ({{c3::Images}} of sets). If \(f: X \rightarrow Y\) is a function from \(X\) to \(Y\), and \(S\) is a subset of \(X\), we define {{c2::\(f(S)\)}} to be the set<br><ol><li>{{c2::\(f(S)\)}}\(:=\){{c1::\(\{f(x): x \in S\}\)}}</li></ol>this set is a subset of {{c5::\(Y\)}} and is sometimes called the {{c3::image}} of \(S\) under the map \(f\). We sometimes call {{c2::\(f(S)\)}} the {{c5::forward}} {{c3::image}} of \(S\) to distinguish it from the concept of the {{c4::inverse}} {{c3::image}}&nbsp;<br>
+
+============================================================
+
+  
+
+    A function \(f: X \rightarrow Y\) is {{c5::{{c3::onto}}}} if and only if {{c4::{{c1::\(f(X)\)}}}}={{c4::{{c2::\(Y\)}}}}.
+
+============================================================
+
+  
+
+    Definition 3.4.5 ({{c5::Inverse images}}) If \(U\) is a subset of \(Y\), we define the set {{c2::\(f^{-1}(U)\)}} to be the set<br><ol><li>{{c2::\(f^{-1}(U)\)}}\(:=\){{c1::\(\{x \in X: f(x) \in U\} .\)}}</li></ol><br>In other words, {{c2::\(f^{-1}(U)\)}} consists of all the elements of \(X\) which {{c1::map into \(U\)}} :<br><ol><li>{{c3::\(f(x)\)}} \(\in\) {{c4::\(U\)}} \(\Longleftrightarrow\) {{c3::\(x\)}} \(\in\) {{c2::\(f^{-1}(U)\)}}</li></ol><br>We call {{c2::\(f^{-1}(U)\)}} the {{c5::inverse image}} of \(U\).<br>
+
+============================================================
+
+  
+
+    <div>For {{c3::bijective}} functions the {{c1::pre-image}}/{{c1::inverse image}} and the {{c5::{{c2::inverse}}}} {{c5::{{c4::agree}}}}&nbsp;</div>
+
+============================================================
+
+  
+
+    Axiom 3.11 ({{c4::Power set}} axiom). Let \(X\) and \(Y\) be sets. Then there exists a set, denoted {{c3::\(Y^{X}\)}}, which consists of all the functions from {{c5::{{c1::\(X\)}}}} to {{c5::{{c2::\(Y\)}}}}, thus<br><ol><li>\(f\) \(\in\) {{c3::\(Y^{X}\)}} \(\Longleftrightarrow\) \((f \text { is a function with }\) {{c5::{{c2::domain}}}}&nbsp;{{c5::{{c1::\(X\)}}}} and {{c5::{{c1::\(\text { codomain }\)}}}} {{c5::{{c2::\(Y)\)}}}}</li></ol>
+
+============================================================
+
+  
+
+    Why do we use exponentiation notation for the power set of functions?<br><br><br>Axiom 3.11 (Power set axiom). Let \(X\) and \(Y\) be sets. Then there exists a set, denoted \(Y^{X}\), which consists of all the functions from \(X\) to \(Y\), thus<br>\[<br>f \in Y^{X} \Longleftrightarrow(f \text { is a function with domain } X \text { and codomain } Y)<br>\]<br><br>The reason we use the notation \(Y^{X}\) to denote this set is that if \(Y\) has {{c5::{{c2::\(n\)}}}} elements and \(X\) has {{c4::{{c3::\(m\)}}}} elements, then one can show that \(Y^{X}\) has {{c4::{{c1::\(n^{m}\)}}}} elements; see Proposition 3.6.14(f).
+
+============================================================
+
+  
+
+    One consequence of this axiom is<br>Lemma 3.4.10 Let \(X\) be a set. Then the set<br>{{c1::\[\{Y: Y \text { is a subset of } X\}\]&nbsp;}}<br><br>is a set. That is to say, there exists a set \(Z\) such that<br><ol><li>\(Y \in Z\) \(\Longleftrightarrow\) \(Y\) {{c2::\(\subseteq\)}} {{c3::\(X\)}}</li></ol>for {{c4::all objects \(Y\).}}<br><br>This is a consquence of the {{c5::power set}} axiom
+
+============================================================
+
+  
+
+    <br>Remark 3.4.11 The set {{c1::\(\{Y: Y\) is a subset of \(X\}\)}} is known as the {{c2::power set}} {{c5::{{c4::of \(X\)}}}} and is denoted {{c5::{{c3::\(2^{X}\)}}}}.&nbsp;
+
+============================================================
+
+  
+
+    Axiom 3.12 (Union). Let \(A\) be a set, all of whose elements are {{c5::themselves sets}}. Then there exists a set {{c2::\(\bigcup A\)}} whose elements are precisely those objects which are {{c4::elements of}} {{c3::the elements of \(A\)}}, thus for all objects \(x\)<br><ol><li>\(x \in\) {{c2::\(\bigcup A\)}} \(\Longleftrightarrow\) {{c1::\((x \in S \text { for some } S \in A)\)}}</li></ol>
+
+============================================================
+
+  
+
+    <br>The axiom of {{c5::{{c1::union}}}}, combined with the axiom of {{c4::{{c2::pair set}}}}, implies the axiom of {{c4::{{c3::pairwise union}}}}
+
+============================================================
+
+  
+
+    Another important consequence of the axiom of union is that if one has some set \(I\), and for {{c5::every element \(\alpha \in I\)}} we have {{c4::some set \(A_{\alpha}\)}}, then we can form the union set {{c3::\(\bigcup_{\alpha \in I}\)}} {{c4::\(A_{\alpha}\)}} by defining<br><ol><li>{{c3::\(\bigcup_{\alpha \in I}\)}} {{c4::\(A_{\alpha}\)}}\(:=\){{c2::\(\bigcup\)}}{{c1::\(\left\{A_{\alpha}: \alpha \in I\right\}\)}}</li></ol>
+
+============================================================
+
+  
+
+    More generally, we see that for any object \(y\),<br><ol><li>\(y\) \(\in\) {{c5::{{c2::\(\bigcup_{\alpha \in I}\)}}}} {{c4::{{c3::\(A_{\alpha}\)}}}} \(\Longleftrightarrow\) {{c4::{{c1::\(\left(y \in A_{\alpha} \text { for some } \alpha \in I\right) \)}}}}</li></ol>
+
+============================================================
+
+  
+
+    &nbsp;More generally, we see that for any object \(y\),<br>\[<br>\begin{equation*}<br>y \in \bigcup_{\alpha \in I} A_{\alpha} \Longleftrightarrow\left(y \in A_{\alpha} \text { for some } \alpha \in I\right) . \tag{3.2}<br>\end{equation*}<br>\]<br><br>In situations like this, we often refer to \(I\) as an {{c1::index}} set, and the elements \(\alpha\) of this index set as {{c2::labels}}; the sets \(A_{\alpha}\) are then called a {{c3::family}} of sets and are {{c4::indexed}} by the {{c2::labels}} \(\alpha \in I\). Note that if \(I\) was {{c5::empty}}, then \(\bigcup_{\alpha \in I} A_{\alpha}\) would automatically also be {{c5::empty}}.
+
+============================================================
+
+  
+
+    We can similarly form {{c4::intersections}} of families of sets, as long as the {{c5::index}} set is {{c3::non-empty}}. More specifically, given any {{c3::non-empty}} set \(I\), and given an assignment of a set \(A_{\alpha}\) to each \(\alpha \in I\), we can define the {{c4::intersection}} {{c4::\(\bigcap_{\alpha \in I}\)::notation}} \(A_{\alpha}\) by first choosing {{c2::some element \(\beta\)}} of {{c2::\(I\)}} (which we can do since \(I\) is {{c3::non-empty}}), and setting<br><ol><li>{{c4::\(\bigcap_{\alpha \in I}\)}} \(A_{\alpha}\)\(:=\){{c1::\(\left\{x \in A_{\beta}: x \in A_{\alpha} \text { for all } \alpha \in I\right\}\)}}</li></ol>
+
+============================================================
+
+  
+
+    We can similarly form intersections of families of sets, as long as the index set is non-empty. More specifically, given any non-empty set \(I\), and given an assignment of a set \(A_{\alpha}\) to each \(\alpha \in I\), we can define the intersection \(\bigcap_{\alpha \in I} A_{\alpha}\) by first choosing some element \(\beta\) of \(I\) (which we can do since \(I\) is non-empty), and setting<br>\[<br>\begin{equation*}<br>\bigcap_{\alpha \in I} A_{\alpha}:=\left\{x \in A_{\beta}: x \in A_{\alpha} \text { for all } \alpha \in I\right\}, \tag{3.3}<br>\end{equation*}<br>\]<br>which is a set by the axiom of specification. <br><br>This definition may look like it depends on the choice of {{c1::\(\beta\)}}, but it does not. Observe that for {{c4::any}} object \(y\),<br><ol><li>\(y\) \(\in\) {{c5::{{c3::\(\bigcap_{\alpha \in I}\)}}}} \(A_{\alpha}\) \(\Longleftrightarrow\){{c5::{{c2::\(\left(y \in A_{\alpha} \text { for all } \alpha \in I\right)\)}}}}</li></ol>
+
+============================================================
+
+  
+
+    Exercise 3.4.1 Let \(f: X \rightarrow Y\) be a {{c5::bijective}} function, and let \(f^{-1}: Y \rightarrow X\) be its {{c5::inverse}}. Let \(V\) be any subset of \(Y\). Prove that the {{c1::forward}} image of \(V\) under {{c2::\(f^{-1}\)}} is {{c4::the same set as}} the {{c2::inverse}} image of \(V\) under {{c1::\(f\)}}; thus the fact that both sets are denoted by {{c3::\(f^{-1}(V)\)}} will not lead to any inconsistency.
+
+============================================================
+
+  
+
+    Exercise 3.4.3 Let \(A, B\) be two subsets of a set \(X\), and let \(f: X \rightarrow Y\) be a function. Show that :{{c2::\(f(A \cap B)\)}} \(\subseteq\) \(f(A)\) {{c1::\(\cap\)}} \(f(B)\), that {{c4::\(f(A) \backslash f(B)\)}} \(\subseteq\) {{c5::\(f(A \backslash B)\)}}, {{c4::\(f(A \cup B)\)}}=\(f(A)\) {{c3::\(\cup\)}} \(f(B)\). For the first two statements, is it true that the \(\subseteq\) relation can be improved to \(=\) ?
+
+============================================================
+
+  
+
+    Exercise 3.4.4 Let \(f: X \rightarrow Y\) be a function from one set \(X\) to another set \(Y\), and let \(U, V\) be subsets of \(Y\). Show that:<br><ol><li>{{c5::&nbsp;\(f^{-1}\)}}{{c1::\((U \cup V)\)}}={{c2::\(f^{-1}(U) \cup f^{-1}(V)\)}},&nbsp;</li><li>{{c5::\(f^{-1}\)}}{{c2::\((U \cap V)\)}} = {{c1::\(f^{-1}(U) \cap f^{-1}(V)\)}}</li><li>{{c5::\(f^{-1}\)}}{{c3::\((U \backslash V)\)}} = {{c4::\(f^{-1}(U) \backslash f^{-1}(V)\).}}</li></ol>
+
+============================================================
+
+  
+
+    Exercise 3.4.5 Let \(f: X \rightarrow Y\) be a function from one set \(X\) to another set \(Y\). Show that {{c1::\(f\left(f^{-1}(S)\right)\)}}=\(S\) for every \(S \subseteq Y\) if and only if \(f\) is {{c2::surjective}}. Show that {{c5::{{c4::\(f^{-1}(f(S))\)}}}}=\(S\) for every \(S \subseteq X\) if and only if \(f\) is {{c5::{{c3::injective}}}}.
+
+============================================================
+
+  
+
+    Exercise 3.4.7 Let \(X, Y\) be sets. Define a {{c4::partial}} function from \(X\) to \(Y\) to be any function \(f:\) {{c3::\(X^{\prime}\)}} \(\rightarrow\) {{c3::\(Y^{\prime}\)}} whose {{c2::domain}} {{c3::\(X^{\prime}\)}} is a {{c1::subset of \(X\)}}, and whose {{c1::codomain}} {{c3::\(Y^{\prime}\)}} is a {{c2::subset of \(Y\)}}. Show that the collection of all {{c4::partial}} functions from \(X\) to \(Y\) is itself a {{c5::set}}.
+
+============================================================
+
+  
+
+    <br>Exercise 3.4.9 Show that if {{c3::\(\beta\)}} and {{c4::\(\beta^{\prime}\)}} are two elements of a set \(I\), and to each \(\alpha \in I\) we assign a set \(A_{\alpha}\), then<br><ol><li>{{c5::{{c2::\(\left\{x \in A_{\beta}: x \in A_{\alpha} \text { for all } \alpha \in I\right\}\)}}}} = {{c5::{{c1::\(\left\{x \in A_{\beta^{\prime} }: x \in A_{\alpha} \text { for all } \alpha \in I\right\},\)}}}}</li></ol>and so the definition of \(\bigcap_{\alpha \in I} A_{\alpha}\) defined in (3.3) does not depend on {{c3::\(\beta\).&nbsp;}}<br>
+
+============================================================
+
+  
+
+    Exercise 3.4.10 Suppose that \(I\) and \(J\) are two sets, and for all \(\alpha \in I \cup J\) let \(A_{\alpha}\) be a set. Show that:<br><ol><li>{{c2::&nbsp;\(\left(\bigcup_{\alpha \in I}&nbsp; A_{\alpha}\right)\)}} {{c3::\(\cup\)}} {{c2::\(\left(\bigcup_{\alpha \in J} A_{\alpha}\right)\)}}={{c1::\(\bigcup_{\alpha \in I \cup J}\)}} \(A_{\alpha}\).&nbsp;</li><li>If \(I\) and \(J\) are non-empty, show that {{c5::\(\left(\bigcap_{\alpha \in I} A_{\alpha}\right) \)}} {{c3::\(\cap\)}} {{c5::\(\left(\bigcap_{\alpha \in J} A_{\alpha}\right)\)}} = {{c4::\(\bigcap_{\alpha \in I \cup J} A_{\alpha}\).}}</li></ol>
+
+============================================================
+
+  
+
+    Exercise 3.4.11 Let \(X\) be a set, let \(I\) be a {{c5::non-empty}} set, and for all \(\alpha \in I\) let \(A_{\alpha}\) be a {{c5::subset}} of \(X\). Show that<br><ol><li>{{c4::\(X\)}} {{c4::\(\backslash\)::operator}} {{c2::\(\bigcup_{\alpha \in I}\)}} \(A_{\alpha}\) = {{c1::\(\bigcap_{\alpha \in I}\)}} {{c3::\(\left(X \backslash A_{\alpha}\right)\)}}</li></ol>and<br><ol><li>{{c4::\(X\)}} {{c4::\(\backslash\)::operator}} {{c1::\(\bigcap_{\alpha \in I}\)}} \(A_{\alpha}\) = {{c2::\(\bigcup_{\alpha \in I}\)}} {{c3::\(\left(X \backslash A_{\alpha}\right)\)}}</li></ol><br>This should be compared with {{c5::De Morgan's laws}} in Proposition 3.1.27 (although one cannot derive the above identities directly from {{c5::De Morgan's laws}}, as \(I\) could be {{c5::infinite}}).<br>
+
+============================================================
+

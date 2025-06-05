@@ -1,0 +1,932 @@
+=== Stripped Clozes Preview (No Changes in Anki) ===
+
+  
+
+    <br>1. {{c5::{{c3::\(\lim _{x \rightarrow a}[c f(x)]\)}}}} = {{c4::{{c2::\(c\)}}}} {{c4::{{c1::\(\lim _{x \rightarrow a} f(x)\)}}}}
+
+============================================================
+
+  
+
+    <br>2. {{c1::\(\lim _{x \rightarrow a}[f(x) \pm g(x)]\)}} = {{c2::\(\lim _{x \rightarrow a} f(x)\)}} {{c5::{{c4::\(\pm\)}}}} {{c5::{{c3::\(\lim _{x \rightarrow a} g(x)\)}}}}
+
+============================================================
+
+  
+
+    <br>3. {{c1::\(\lim _{x \rightarrow a}[f(x) g(x)]\)}}= {{c2::\(\lim _{x \rightarrow a} f(x) \)}} {{c5::{{c4::\(\times\)}}}} {{c5::{{c3::\(\lim _{x \rightarrow a} g(x)\)}}}}
+
+============================================================
+
+  
+
+    <ol><li>{{c1::\(\lim _{x \rightarrow a}\left[\frac{f(x)}{g(x)}\right]\)}} = {{c2::\(\lim _{x \rightarrow a} f(x)\)}}&nbsp;{{c4::\(/\)}} {{c3::\(\lim _{x \rightarrow a} g(x)\)}}</li><ol><li>provided {{c3::\(\lim _{x \rightarrow a} g(x)\)}} {{c5::condition}}</li></ol></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c5::{{c3::\(\lim _{x \rightarrow a}\)}}}}{{c4::{{c2::\([\sqrt[n]{f(x)}]\)}}}} = {{c4::{{c1::\(\sqrt[n]{\lim _{x \rightarrow a} f(x)}\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c3::\(\lim _{x \rightarrow \infty}\)}} \(\mathbf{e}^{x}\) = {{c1::\(\infty\)&nbsp;}}</li><li>{{c5::{{c4::\(\lim _{x \rightarrow-\infty}\)}}}} \(\mathbf{e}^{x}\) = {{c5::{{c2::\(0\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c4::\(\lim _{x \rightarrow \infty}\)}} \(\ln (x)\) = {{c1::\(\infty\)}}</li><li>{{c5::{{c3::\(\lim _{x \rightarrow 0^{+} }\)}}}} \(\ln (x)\) = {{c5::{{c2::\(-\infty\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>If {{c4::\(r\)}} {{c3::\(&gt;\)}} {{c3::\(0\)}} then {{c5::{{c2::\(\lim _{x \rightarrow \infty}\)}}}} \(\frac{b}{x^{r}}\) = {{c5::{{c1::\(0\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>If \(r\) {{c3::\(&gt;\)}} {{c3::\(0\)}} and \(x^{r}\) is {{c4::real}} for {{c5::negative}} \(x\) then {{c2::\(\lim _{x \rightarrow-\infty}\)}} \(\frac{b}{x^{r}}\) = {{c1::\(0\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <div><br>5. \(n\) {{c5::{{c1::even::parity}}::parity}} : {{c4::{{c3::\(\lim _{x \rightarrow \pm \infty}\)}}}} \(x^{n}\)= {{c4::{{c2::\(\infty\)}}}}<br></div>
+
+============================================================
+
+  
+
+    <ol><li>\(n\) {{c1::odd::parity}} :&nbsp;</li><ol><li>{{c4::\(\lim _{x \rightarrow \infty}\)}} \(x^{n}\) = {{c2::\(\infty\)&nbsp;}}</li><li>and</li><li>{{c5::\(\lim _{x \rightarrow-\infty}\)}} \(x^{n}\)={{c3::\(-\infty\)}}</li></ol></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(n\) {{c2::even::parity}} : {{c5::\(\lim _{x \rightarrow \pm \infty}\)}} {{c4::\(a x^{n}+\cdots+b x+c\)}} = {{c1::\(\operatorname{sgn}(a)\)}} {{c3::\(\infty\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <br>8. \(n\) {{c2::odd::parity}}: {{c1::\(\lim _{x \rightarrow \infty}\)}} {{c5::\(a x^{n}+\cdots+b x+c\)}} = {{c3::\(\operatorname{sgn}(a)\)}} {{c4::\(\infty\)}}
+
+============================================================
+
+  
+
+    <ol><li>\(n\) {{c3::odd::parity}}: {{c2::\(\lim _{x \rightarrow-\infty}\)}} {{c5::\(a x^{n}+\cdots+c x+d\)}} = {{c1::\(-\operatorname{sgn}(a)\)}} {{c4::\(\infty\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <div>Note: {{c5::\(\operatorname{sgn}\)}} (\(a\)) = {{c1::\(1\)}} if \(a\) {{c3::\(&gt;\)}} {{c3::\(0\)}} and {{c5::\(\operatorname{sgn}\)}}(\(a\)) = \{{c2::(-1\)}} if \(a\) {{c4::\(&lt;\)}} {{c4::\(0\)}}.</div>
+
+============================================================
+
+  
+
+    <ol><li>\(f(x)\) is {{c2::continuous}} at {{c2::\(b\)}} and {{c5::\(\lim _{x \rightarrow a} g(x)\)}} = {{c5::\(b\)}} then</li><ol><li>{{c4::\(\lim _{x \rightarrow a} f(g(x))\)&nbsp;}}</li><li>= {{c1::\(f\left(\lim _{x \rightarrow a} g(x)\right)\)}}</li><li>= {{c3::\(f(b)\)}}</li></ol></ol>
+
+============================================================
+
+  
+
+    Name: {{c2::Factor and Cancel}}<br><ol><li>{{c4::\(\lim _{x \rightarrow 2}\)}} {{c3::\(\frac{x^{2}+4 x-12}{x^{2}-2 x}&nbsp;&nbsp;\)}}</li><li>= {{c4::\(\lim _{x \rightarrow 2}\)}} {{c1::\(\frac{(x-2)(x+6)}{x(x-2)} \)}}</li><li>= {{c4::\(\lim _{x \rightarrow 2}\)}} {{c2::\(\frac{x+6}{x} \)}}</li><li>= {{c5::\(\frac{8}{2} \)}}</li><li>= \(4\)</li></ol>
+
+============================================================
+
+  
+
+    <div>Name: {{c5::Rationalize Numerator/Denominator}}</div><ol><li>\(\lim _{x \rightarrow 9}\) {{c4::\(\frac{3-\sqrt{x} }{x^2-81}\)}}<br></li><li>=&nbsp;\(\lim _{x \rightarrow 9}\) {{c1::\(\frac{3-\sqrt{x} }{x^2-81} \frac{3+\sqrt{x} }{3+\sqrt{x} }\)}}</li><li>= \(\lim _{x \rightarrow 9}\) {{c2::\(\frac{9-x}{\left(x^2-81\right)(3+\sqrt{x})}\)}}</li><li>=&nbsp;\(\lim _{x \rightarrow 9}\) {{c3::\(\frac{-1}{(x+9)(3+\sqrt{x})}\)}}</li><li>=\(&nbsp;\frac{-1}{(18)(6)}\)</li><li>= \(-\frac{1}{108}\)</li></ol>
+
+============================================================
+
+  
+
+    Name: {{c5::Combine Rational Expressions}}:<br><ol><li>{{c5::\(\lim _{h \rightarrow 0}\)}} {{c4::\(\frac{1}{h}\left(\frac{1}{x+h}-\frac{1}{x}\right)\)&nbsp;}}</li><li>= {{c5::\(\lim _{h \rightarrow 0}\)}} {{c1::\(\frac{1}{h}\left(\frac{x-(x+h)}{x(x+h)}\right) \)}}<br></li><li>= {{c5::\(\lim _{h \rightarrow 0}\)}} {{c2::\(\frac{1}{h}\left(\frac{-h}{x(x+h)}\right)\)}}</li><li>= {{c5::\(\lim _{h \rightarrow 0}\)}} {{c3::\(\frac{-1}{x(x+h)}\)&nbsp;}}</li><li>=\(-\frac{1}{x^{2}}\)</li></ol>
+
+============================================================
+
+  
+
+    Name:&nbsp;{{c5::L'Hospital's/L'Hôpital's Rule}}<br><ol><li>If {{c4::\(\lim _{x \rightarrow a}\)}} {{c3::\(\frac{f(x)}{g(x)}\)}} = {{c2::\(\frac{0}{0}\)}} or {{c4::\(\lim _{x \rightarrow a}\)}} {{c3::\(\frac{f(x)}{g(x)}\)}} = {{c2::\(\frac{ \pm \infty}{ \pm \infty}\)}} then,</li><li>{{c4::\(\lim _{x \rightarrow a}\)}} {{c3::\(\frac{f(x)}{g(x)}\)}} = {{c4::\(\lim _{x \rightarrow a}\)}} {{c1::\(\frac{f^{\prime}(x)}{g^{\prime}(x)}\)&nbsp;}}</li><ol><li>for&nbsp;\(a\)\(\in\){{c5::\(R \cup\{-\infty,\infty\}\)}}</li></ol></ol>
+
+============================================================
+
+  
+
+    Name: {{c5::Polynomials at Infinity}}<br><br>\(p(x)\) and \(q(x)\) are polynomials. To compute<br>{{c5::\(\lim _{x \rightarrow \pm \infty}\)}} {{c2::\(\frac{p(x)}{q(x)}\)}} {{c1::factor}} {{c2::largest power of \(x\)}} in {{c3::\(q(x)\)}} out of {{c4::both \(p(x)\) and \(q(x)\)}} then {{c5::compute limit}}.<br>
+
+============================================================
+
+  
+
+    Name: {{c5::Piecewise Functions}}<br>\(\lim _{x \rightarrow-2} g(x)\) where \(g(x)= \begin{cases}x^{2}+5 &amp; \text { if } x&lt;-2 \\ 1-3 x &amp; \text { if } x \geq-2\end{cases}\)<br>Compute {{c1::two one sided limits}},<br><br><ol><li>{{c3::\(\lim _{x \rightarrow-2^{-} } g(x)\)}} = {{c2::\(\lim _{x \rightarrow-2^{-} } x^{2}+5=9\)}}</li><li>{{c2::\(\lim _{x \rightarrow-2^{+} } g(x)\)}} = {{c3::\(\lim _{x \rightarrow-2^{+} } 1-3 x=7\)}}</li></ol><br>{{c1::One sided limits}} are {{c4::different}} so \(\lim _{x \rightarrow-2} g(x)\) {{c5::doesn't exist}}. If the {{c1::two one sided limits}} had {{c5::been equal}} then \(\lim _{x \rightarrow-2} g(x)\) would {{c4::have existed}} and {{c4::had the same value.}}<br>
+
+============================================================
+
+  
+
+    Partial list of continous functions:<br><ol><li>{{c5::Polynomials}} for {{c2::all \(x\)}}.<br></li><li>{{c4::Rational}} function, except for \(x\) 's that give {{c5::division by 0}}<br></li><li>{{c3::\(\sqrt[n]{x}\)}} ( n {{c1::odd::parity}}) for {{c2::all \(x\)}}.<br></li><li>{{c3::\(\sqrt[n]{x}\)}} (n {{c1::even}}) for all \(x\) {{c3::\(\geq\)}} {{c3::\(0\)}}.<br></li></ol>
+
+============================================================
+
+  
+
+    Partial list of continous functions:<br><ol><li>{{c5::\(\mathbf{e}^{x}\)}} for {{c4::all \(x\)}}.<br></li><li>{{c2::\(\ln\)}} (\(x\)) for \(x\) {{c1::\(&gt;\)}} {{c1::\(0\)}}.<br></li><li>{{c3::\(\cos\)}}(\(x\)) and {{c3::\(\sin\)}}(\(x\))&nbsp;for {{c4::all \(x\).}}<br></li></ol>
+
+============================================================
+
+  
+
+    Partial list of continous functions:<br><ol><li>{{c4::\(\tan (x)\)}} and {{c4::\(\sec (x)\)}} provided<br></li><ol><li>\(x\) {{c3::\(\neq\)}} {{c1::\(\cdots,-\frac{3 \pi}{2},-\frac{\pi}{2}, \frac{\pi}{2}, \frac{3 \pi}{2}, \cdots\)}}</li></ol><li>{{c5::\(\cot (x)\)}} and {{c5::\(\csc (x)\)}} provided<br></li><ol><li>\(x\) {{c3::\(\neq\)}} {{c2::\(\cdots,-2 \pi,-\pi, 0, \pi, 2 \pi, \cdots\)}}<br></li></ol></ol>
+
+============================================================
+
+  
+
+    {{c5::Intermediate Value}} Theorem<br>Suppose that \(f(x)\) is {{c4::continuous}} on {{c5::\([a, b]\)}} and let {{c1::\(M\)}} be {{c3::any number between \(f(a)\) and \(f(b)\)}}. Then there exists {{c2::a number \(c\)}} such that \(a&lt;c&lt;b\) and {{c1::\(f(c)\)}} = {{c1::\(M\)}}.
+
+============================================================
+
+  
+
+    If \(y=f(x)\) all of the following are equivalent notations for derivative evaluated at \(x=a\).<br><ol><li>{{c5::\(f^{\prime}(a)\)}}</li><li>={{c1::\(\left.y^{\prime}\right|_{x=a}\)}}</li><li>={{c2::\(\left.\frac{d f}{d x}\right|_{x=a}\)}}</li><li>={{c3::\(\left.\frac{d y}{d x}\right|_{x=a}\)}}</li><li>={{c4::\(D f(a)\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    If \(y=f(x)\) then all of the following are equivalent notations for the derivative.<br><ul><li>{{c5::\(f^{\prime}(x)\)&nbsp;}}</li><li>= {{c1::\(y^{\prime}\)&nbsp;}}</li><li>= {{c2::\(\frac{d f}{d x}\)&nbsp;}}</li><li>= {{c3::\(\frac{d y}{d x}\)}}</li><li>= {{c4::\(\frac{d}{d x}(f(x))\)}}</li><li>= {{c5::\(D f(x)\)}}</li></ul>
+
+============================================================
+
+  
+
+    If \(f(x)\) and \(g(x)\) are differentiable functions (the derivative exists), \(c\) and \(n\) are any real numbers<br><ol><li>{{c5::{{c2::\(\frac{d}{d x}\)}}}} {{c4::{{c3::\((c)\)}}}} = {{c4::{{c1::\(0\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>If \(y=f(x)\) then,<br>1. \(m=f^{\prime}(a)\) is the {{c5::slope}} of the {{c5::tangent line}} to \(y=f(x)\) at \(x=a\) and the equation of the {{c5::tangent line}} at \(x=a\) is given by \(y\) = {{c4::\(f(a)\)}} {{c5::+}} {{c3::\(f^{\prime}\)}} {{c2::\((a)\)}}{{c1::\((x-a)\)}}.<br></li></ol>
+
+============================================================
+
+  
+
+    <div>If \(f(x)\) and \(g(x)\) are differentiable functions (the derivative exists), \(c\) and \(n\) are any real numbers,<br></div><div><ol><li>{{c5::{{c1::\((c f(x))^{\prime}\)}}}} = {{c4::{{c3::\(c\)}}}} {{c4::{{c2::\(f^{\prime}(x)\)}}}}<br></li></ol></div>
+
+============================================================
+
+  
+
+    <div>If \(f(x)\) and \(g(x)\) are differentiable functions (the derivative exists), \(c\) and \(n\) are any real numbers,<br></div><div><ol><li>{{c1::\(\frac{d}{d x}\left(x^{n}\right)\)}} = {{c3::\(n\)}} {{c5::{{c2::\(x^{n-1}\)}}}} - {{c5::{{c4::Power Rule::name}}::name}}<br></li></ol></div>
+
+============================================================
+
+  
+
+    <div>If \(f(x)\) and \(g(x)\) are differentiable functions (the derivative exists), \(c\) and \(n\) are any real numbers,<br></div><div><ol><li>{{c1::\((f(x) \pm g(x))^{\prime}\)}} = {{c2::\(f^{\prime}(x)\)}} {{c5::{{c4::\(\pm\)}}}} {{c5::{{c3::\(g^{\prime}(x)\)}}}}<br></li></ol></div>
+
+============================================================
+
+  
+
+    <div>If \(f(x)\) and \(g(x)\) are differentiable functions (the derivative exists), \(c\) and \(n\) are any real numbers,<br></div><div><ol><li>{{c1::\((f(x) g(x))^{\prime}\)}} = {{c2::\(f^{\prime}(x) g(x)\)}}{{c4::\(+\)}}{{c3::\(f(x) g^{\prime}(x)\)}} - {{c5::Product Rule::name}}<br></li></ol></div>
+
+============================================================
+
+  
+
+    <div>If \(f(x)\) and \(g(x)\) are differentiable functions (the derivative exists), \(c\) and \(n\) are any real numbers,<br></div><div><ol><li>{{c4::\(\left(\frac{f(x)}{g(x)}\right)^{\prime}\)}} = {{c1::\((f^{\prime}(x) g(x)-f(x) g^{\prime}(x))\)}} {{c3::\(/\)}} {{c2::\((g(x))^{2}\)&nbsp;}}</li><li>{{c5::&nbsp;Quotient Rule::name}}<br></li></ol></div>
+
+============================================================
+
+  
+
+    <div>If \(f(x)\) and \(g(x)\) are differentiable functions (the derivative exists), \(c\) and \(n\) are any real numbers,<br></div><div><ol><li>{{c1::\(\frac{d f(g(x))}{d x}\)}} = {{c2::\(\frac{d f(g(x))}{d g(x)}\)}}{{c5::{{c3::&nbsp;\(\frac{d g(x)}{d x}\)&nbsp;}}}}</li><li>{{c5::{{c4::Chain Rule::name}}::name}}<br></li></ol></div>
+
+============================================================
+
+  
+
+    <div><div><ol><li>{{c3::\(\frac{d}{d x}\)}} {{c2::\(\sin\)}} {{c5::{{c4::(\(x\))}}}}={{c5::{{c1::\(\cos\)}}}}{{c4::(\(x\))}}</li></ol></div></div>
+
+============================================================
+
+  
+
+    <div><ol><li>{{c3::\(\frac{d}{d x}\)}}{{c2::\(\cos\)}}{{c5::{{c4::(\(x\))}}}}={{c5::{{c1::\(-\sin\)}}}}{{c4::(\(x\))}}</li></ol></div>
+
+============================================================
+
+  
+
+    <ol><li>{{c3::\(\frac{d}{d x}\)}}{{c2::\(\tan\)}}{{c5::{{c4::(\(x\))}}}}={{c5::{{c1::\(\sec^2\)}}}}{{c4::(\(x\))}}</li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c4::\(\frac{d}{d x}\)}}({{c3::\(\sec\)}} (\(x\)))={{c5::{{c1::\(\sec\)}}}} (\(x\)) {{c5::{{c2::\(\tan\)}}}} (\(x\))</li></ol>
+
+============================================================
+
+  
+
+    <div><ol><li>{{c4::\(\frac{d}{d x}\)}}{{c3::\(\csc\)}} (\(x\))={{c5::{{c1::\(-\csc\)}}}} (\(x\)) {{c5::{{c2::\(\cot\)}}}} (\(x\))</li></ol></div>
+
+============================================================
+
+  
+
+    <ul><li>{{c5::{{c3::\(\frac{d}{d x}\)}}}}{{c4::{{c2::\(\cot\)}}}} (\(x\))={{c4::{{c1::\(-\csc ^2\)}}}}(\(x\))<br></li></ul>
+
+============================================================
+
+  
+
+    <ul><li>{{c5::{{c3::\(\frac{d}{d x}\)}}}}{{c4::{{c2::\(\sin ^{-1}\)}}}}(\(x\))={{c4::{{c1::\(\frac{1}{\sqrt{1-x^2} }\)}}}}<br></li></ul>
+
+============================================================
+
+  
+
+    <ul><li>{{c5::{{c3::\(\frac{d}{d x}\)}}}}{{c4::{{c2::\(\cos ^{-1}\)}}}}(\(x\))={{c4::{{c1::\(-\frac{1}{\sqrt{1-x^2} }\)}}}}<br></li></ul>
+
+============================================================
+
+  
+
+    <ul><li>{{c3::\(\frac{d}{d x}\)}}{{c2::\(\tan ^{-1}\)}}{{c5::{{c4::(\(x\))}}}}={{c5::{{c1::\(\frac{1}{1+x^2}\)}}}}<br></li></ul>
+
+============================================================
+
+  
+
+    <ul><li>{{c4::\(\frac{d}{d x}\)}}{{c3::\(a^x\)}}={{c5::{{c2::\(a^x\)}}}} {{c5::{{c1::\(\ln (a)\)}}}}<br></li></ul>
+
+============================================================
+
+  
+
+    <ul><li>{{c5::{{c3::\(\frac{d}{d x}\)}}}}{{c4::{{c2::\(\left(\mathbf{e}^x\right)\)}}}}={{c4::{{c1::\(\mathbf{e}^x\)}}}}<br></li></ul>
+
+============================================================
+
+  
+
+    <ul><li>{{c4::\(\frac{d}{d x}\)}}{{c3::\(\ln\)}} (\(x\))={{c5::{{c1::\(\frac{1}{x}\)}}}}, \(x\){{c5::{{c2::\(&gt;\)}}}}{{c5::{{c2::\(0\)}}}}<br></li></ul>
+
+============================================================
+
+  
+
+    <ul><li>{{c4::\(\frac{d}{d x}\)}}{{c3::\(\ln\)}} ({{c1::\(|x|\)}})={{c2::\(\frac{1}{x}\)}},&nbsp;</li><ul><li>If \(x\) {{c5::\(\neq\)}} {{c5::\(0\)}}</li></ul></ul>
+
+============================================================
+
+  
+
+    <ul><li>{{c3::\(\frac{d}{d x}\)}} {{c2::\(\log _a\)}}({{c4::\(x\)}}) ={{c1::\(\frac{1}{x \ln (a)}\)}},&nbsp;</li><li>If \(x\){{c5::\(&gt;\)}}{{c5::\(0\)}}<br></li></ul>
+
+============================================================
+
+  
+
+    <ol><li>&nbsp;{{c5::\(\frac{d}{d x}\)}}{{c4::\([f(x)]^{n}\)}}={{c3::\(n\)}}{{c1::\([f(x)]^{n-1}\)}} {{c2::\(f^{\prime}(x)\)}}</li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c4::\(\frac{d}{d x}\)}}{{c3::\(\mathbf{e}^{f(x)}\)}}={{c5::{{c1::\(\mathbf{e}^{f(x)}\)}}}}{{c5::{{c2::\(f^{\prime}(x)\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c4::\(\frac{d}{d x}\)}}{{c2::\(\ln\)}} [{{c5::{{c3::\(f(x)\)}}}}]={{c5::{{c1::\(\frac{f^{\prime}(x)}{f(x)}\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c5::\(\frac{d}{d x}\)}}{{c2::\(\sin\)}} [{{c4::\(f(x)\)}}]={{c1::\(\cos\)}} [{{c4::\(f(x)\)}}] {{c3::\(f^{\prime}(x)\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c5::\(\frac{d}{d x}\)}} {{c2::\(\cos\)}} [{{c4::\(f(x)\)}}]={{c3::\(-f^{\prime}(x)\)}} {{c1::\(\sin\)}} [{{c4::\(f(x)\)}}]<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c5::\(\frac{d}{d x}\)}} {{c2::\(\tan\)}} [{{c3::\(f(x)\)}}] = {{c4::\(f^{\prime}(x)\)}} {{c1::\(\sec^{2}\)}} [{{c3::\(f(x)\)}}]<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c5::\(\frac{d}{d x}\)}} {{c2::\(\sec\)}} [{{c3::\(f(x)\)}}] = {{c4::\(f^{\prime}(x)\)}} {{c1::\(\sec\)}} [{{c3::\(f(x)\)}}] {{c1::\(\tan\)}} [{{c3::\(f(x)\)}}]<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c4::\(\frac{d}{d x}\)}} {{c2::\(\tan^{-1}\)}} [{{c5::{{c3::\(f(x)\)}}}}] ={{c5::{{c1::\(\frac{f^{\prime}(x)}{1+[f(x)]^{2} }\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    The {{c4::\(2^{\text {nd } }\)}} Derivative is denoted as<br><ol><li>{{c3::\(f^{\prime \prime}(x)\)}} = {{c5::{{c2::\(f^{(2)}(x)\)}}}} = {{c5::{{c1::\(\frac{d^{2} f}{d x^{2} }\)&nbsp;}}}}</li></ol>
+
+============================================================
+
+  
+
+    The \(2^{\text {nd }}\) Derivative is denoted as<br>\(f^{\prime \prime}(x)=f^{(2)}(x)=\frac{d^{2} f}{d x^{2}}\) and is defined as:<br><ol><li>{{c2::&nbsp;\(f^{\prime \prime}(x)\)}} = {{c1::\((f^{\prime}(x))^{\prime}\)}}</li><li>&nbsp;i.e. the {{c5::{{c3::derivative}}}} of {{c5::{{c4::the first derivative}}}}, {{c5::{{c4::\(f^{\prime}(x)\)}}}}.</li></ol>
+
+============================================================
+
+  
+
+    The {{c3::\(n^{\text {th } }\)}} {{c4::Derivative}} is:<br><ol><li>&nbsp;Denoted as {{c5::{{c2::\(f^{(n)}(x)\)}}}} = {{c5::{{c1::\(\frac{d^{n} f}{d x^{n} }\)&nbsp;}}}}</li></ol>
+
+============================================================
+
+  
+
+    The \(n^{\text {th }}\) Derivative is:<br><ol><li>Denoted as \(f^{(n)}(x)=\frac{d^{n} f}{d x^{n}}\)&nbsp;</li><li>Defined as {{c3::\(f^{(n)}(x)\)}} = {{c2::\((\)}} {{c1::\(f^{(n-1)}(x)\)}} {{c2::\()^{\prime}\)}}, i.e. the {{c4::derivative}} of {{c5::the \((n-1)^{s t}\) derivative}}, {{c1::\(f^{(n-1)}(x)\)}}.</li></ol>
+
+============================================================
+
+  
+
+    Implicit diferentiation of&nbsp;\(\mathbf{e}^{2 x-9 y}+x^{3} y^{2}=\sin (y)+11 x\)<br><ol><li>{{c4::\(\mathbf{e}^{2x - 9y}\)}}{{c1::\(\left(2 - 9\frac{dy}{dx}\right)\)}} + {{c3::\(3x^2y^2\)}} + {{c2::\(2x^3y\frac{dy}{dx}&nbsp;\)}} = {{c5::\(\cos(y)\)\(\frac{dy}{dx}\) + \(11\)&nbsp;}}</li><li>From this, put all terms with&nbsp;\(\frac{dy}{dx}\) on one side and then resolve&nbsp;\(\frac{dy}{dx}\), the final fraction may include both x and&nbsp;\(y\)</li><li>\(&nbsp;y^{\prime}=\frac{11-2 \mathbf{e}^{2 x-9 y}-3 x^2 y^2}{2 x^3 y-9 \mathbf{e}^{2 x-9 y}-\cos (y)}\)</li></ol>
+
+============================================================
+
+  
+
+    \(x=c\) is a {{c4::critical}} {{c5::point}} of \(f(x)\) provided {{c5::either}}<br><ol><li>{{c1::\(f^{\prime}(c)\)}} = {{c2::\(0\)}} or,</li><li>{{c1::\(f^{\prime}(c)\)}} {{c3::doesn't exist::property}}.</li></ol>
+
+============================================================
+
+  
+
+    \section*{Increasing/Decreasing}<br><ol><li>If {{c5::\(f^{\prime}(x)\)}} {{c1::&gt;}} {{c1::\(0\)}} for all \(x\) in an interval \(I\) then \(f(x)\) is {{c2::increasing}} on {{c5::the interval \(I\)}}.</li><li>If {{c5::\(f^{\prime}(x)\)}} {{c2::&lt;}} {{c2::\(0\)}} for all \(x\) in an interval \(I\) then \(f(x)\) is {{c1::decreasing}} on {{c5::the interval \(I\)}}.</li><li>If {{c5::\(f^{\prime}(x)\)}} {{c3::=}} {{c3::\(0\)}} for all \(x\) in an interval \(I\) then \(f(x)\) is {{c4::constant}} on {{c5::the interval \(I\)}}.<br></li></ol>
+
+============================================================
+
+  
+
+    <br>1. If {{c5::\(f^{\prime \prime}(x)\)}} {{c3::\(&gt;\)}} {{c3::\(0\)}} for all \(x\) in an {{c5::interval \(I\)}} then \(f(x)\) is {{c1::convex}} on the interval \(I\).<br>2. If {{c5::\(f^{\prime \prime}(x)\)}} {{c4::\(&lt;\)}} {{c4::\(0\)}} for all \(x\) in an {{c5::interval \(I\)}} then \(f(x)\) is {{c2::concave}} on the interval \(I\).
+
+============================================================
+
+  
+
+    \(x=c\) is a {{c5::inflection}} point of \(f(x)\) if the {{c5::concavity}} {{c4::changes}} at \(x=c\).<br><br>Which is equivalent to requiering that&nbsp;{{c1::\((f^\prime)^\prime\)}}&nbsp; = {{c2::\(0\)}} and that {{c1::\((f^\prime)^\prime\)}} {{c4::changes}} {{c3::sign at the point}}
+
+============================================================
+
+  
+
+    <ol><li>\(x=c\) is an {{c5::absolute}} {{c2::maximum}} of \(f(x)\) if \(f(c)\) {{c1::\(\geq\)}} \(f(x)\) for {{c3::all \(x\)}} in {{c4::the domain.}}</li><li>\(x=c\) is an {{c5::absolute}} {{c1::minimum}} of \(f(x)\) if \(f(c)\) {{c2::\(\leq\)}} \(f(x)\) for {{c3::all \(x\)}} in {{c4::the domain.}}</li></ol>
+
+============================================================
+
+  
+
+    {{c2::Fermat's}} Theorem<br><br>If \(f(x)\) has a {{c4::relative}} (or {{c4::local}}) {{c3::extrema}} at \(x=c\), then \(x=c\) is a {{c1::critical}} {{c5::point}} of \(f(x)\).
+
+============================================================
+
+  
+
+    {{c5::Extreme Value}} Theorem<br><br>If \(f(x)\) is {{c5::continuous}} on the {{c5::closed interval \([a, b]\)}} then there exist numbers \(c\) and \(d\) so that,<br><ol><li>{{c4::\(a\)}} {{c4::\(\leq\)}} \(c, d\) {{c4::\(\leq\)}} {{c4::\(b\)}},</li><li>\(f(c)\) is the {{c3::absolute}} {{c1::maximum}} in \([a, b]\),</li><li>\(f(d)\) is the {{c3::absolute}} {{c2::minimum}} in \([a, b]\).</li></ol>
+
+============================================================
+
+  
+
+    <br><br>To find the {{c5::absolute}} extrema of the {{c5::continuous}} function \(f(x)\) on the {{c5::closed}} interval {{c5::\([a, b]\)}} use the following process.<br>1. Find all {{c1::critical}} points of \(f(x)\) in \([a, b]\).<br>2. {{c2::Evaluate \(f(x)\) at all points found in Step 1.}}<br>3. Evaluate {{c3::\(f(a)\)}} and {{c4::\(f(b)\).}}<br>4. Compare
+
+============================================================
+
+  
+
+    \section*{\(1^{\text {st }}\) Derivative Test}<br><br>If \(x=c\) is a {{c5::critical}} point of \(f(x)\) then \(x=c\) is<br><ol><li>a relative {{c1::maximum}} of \(f(x)\) if \(f^{\prime}(x)\) {{c3::\(&gt;\)}} {{c3::\(0\)}} to the left of \(x\) = \(c\) and \(f^{\prime}(x)\) {{c4::\(&lt;\)}} {{c4::\(0\)}} to the right of \(x=c\).</li><li>a relative {{c2::minimum}} of \(f(x)\) if \(f^{\prime}(x)\) {{c4::\(&lt;\)}} {{c4::\(0\)}} to the left of \(x=c\) and \(f^{\prime}(x)\) {{c3::\(&gt;\)}} {{c3::\(0\)}} to the right of \(x=c\).</li><li>{{c2::not}} a relative {{c1::extrema}} of \(f(x)\) if \(f^{\prime}(x\) is the {{c5::same sign}} on {{c5::both sides}} of \(x=c\).</li></ol>
+
+============================================================
+
+  
+
+    {{c4::\(2^{\text {nd }}\)}} Derivative Test<br><br>If \(x=c\) is a critical point of \(f(x)\) such that \(f^{\prime}(c)\) = \(0\) then \(x=c\)<br><ol><li>is a {{c5::relative}} {{c2::maximum}} of \(f(x)\) if {{c4::\(f^{\prime \prime}(c)\)}} {{c1::\(&lt;\)}} {{c1::\(0\)}}.</li><li>is a {{c5::relative}} {{c1::minimum}} of \(f(x)\) if {{c4::\(f^{\prime \prime}(c)\)}} {{c2::\(&gt;\)}} {{c2::\(0\)}}.</li><li>may be a {{c5::relative}} {{c2::maximum}}, {{c5::relative}} {{c1::minimum}}, or {{c3::neither}} if {{c4::\(f^{\prime \prime}(c)\)}} = {{c3::\(0\)}}.</li></ol>
+
+============================================================
+
+  
+
+    \section*{Finding Relative Extrema and/or Classify Critical Points}<br>1. Find {{c3::all}} {{c4::critical points}} of \(f(x)\).<br>2. Use the {{c5::{{c1::\(1^{\text {st } }\)}}}} derivative test or the {{c5::{{c2::\(2^{\text {nd } }\)}}}} derivative test on each {{c4::critical point}}.
+
+============================================================
+
+  
+
+    {{c5::Mean Value}} Theorem<br><br>If \(f(x)\) is continuous on the {{c3::closed interval \([a, b]\)}} and {{c4::differentiable}} on the {{c5::open interval \((a, b)\)}} then there is a number \(a&lt;c&lt;b\) such that {{c2::\(f^{\prime}(c)\)}} = {{c1::\(\frac{f(b)-f(a)}{b-a}\).}}
+
+============================================================
+
+  
+
+    Newton's Method<br><br>If \(x_{n}\) is the \(n^{\text {th }}\) guess for the {{c4::root/solution}} of {{c5::\(f(x)\)}} = {{c5::\(0\)}} then \((n+1)^{s t}\) guess is \(x_{n+1}\) = {{c2::\(x_{n}\)}}{{c3::-}}{{c1::\(\frac{f\left(x_{n}\right)}{f^{\prime}\left(x_{n}\right)}\)}} provided {{c5::\(f^{\prime}\left(x_{n}\right)\)}} exists.
+
+============================================================
+
+  
+
+    <div>\section*{Related Rates}<br><br>Sketch picture and identify known/unknown quantities. Write down equation relating quantities and {{c2::differentiate}} with respect to {{c1::\(t\)}} using {{c5::{{c3::implicit}}}} {{c2::differentiation}} (i.e. add on {{c5::{{c4::a derivative}}}} every time you {{c2::differentiate}} a {{c1::function of \(t\)}} ). Plug in known quantities and solve for the unknown quantity.<br></div>
+
+============================================================
+
+  
+
+    <div>Example A 15 foot ladder is resting against a wall. The bottom is initially 10 ft away and is being pushed towards the wall at \(\frac{1}{4} \mathrm{ft} / \mathrm{sec}\). How fast is the top moving after 12 sec ?<br></div><div><img src="paste-a7a161744913ff611df1d9ccf23cf992ff72df70.jpg"><br></div><div><br>\(x^{\prime}\) is negative because \(x\) is decreasing. Using {{c3::Pythagorean Theorem}} and {{c4::differentiating}},<br>\(x^{2}+y^{2}=15^{2} \quad \Rightarrow \quad\) {{c5::{{c1::\(2 x x^{\prime}\)}}}}+ {{c5::{{c2::\(2 y y^{\prime}\)}}}} = \(0\)<br>After 12 sec we have \(x=10-12\left(\frac{1}{4}\right)=7\) and so \(y=\sqrt{15^{2}-7^{2}}=\sqrt{176}\). Plug in and solve for \(y^{\prime}\).<br>\(7\left(-\frac{1}{4}\right)+\sqrt{176} y^{\prime}=0 \Rightarrow y^{\prime}=\frac{7}{4 \sqrt{176}} \mathrm{ft} / \mathrm{sec}\)<br></div>
+
+============================================================
+
+  
+
+    <div>Example Two people are 50 ft apart when one starts walking north. The angle \(\theta\) changes at \(0.01 \mathrm{rad} / \mathrm{min}\). At what rate is the distance between them changing when \(\theta=0.5\) rad?<br></div><div><img src="paste-2ac6813483aac5be1ac6aa88a4d9137dd4231dd3.jpg"><br></div><div>We have \(\theta^{\prime}=0.01 \mathrm{rad} / \mathrm{min}\). and want to find \(x^{\prime}\). We can use various trig functions but easiest is,<br>\(\sec (\theta)=\frac{x}{50} \Rightarrow\) {{c1::\(\sec (\theta)\)}} {{c2::\(\tan (\theta)\)}}{{c5::{{c3::\( \theta^{\prime}\)}}}} = {{c5::{{c4::\(\frac{x^{\prime} }{50}\)}}}}<br>We know \(\theta=0.5\) so plug in \(\theta^{\prime}\) and solve.<br>\(\sec (0.5) \tan (0.5)(0.01)=\frac{x^{\prime}}{50}\)<br>\[<br>x^{\prime}=0.3112 \mathrm{ft} / \mathrm{min}<br>\]<br><br>Remember to have calculator in radians!<br></div>
+
+============================================================
+
+  
+
+    <div>\section*{Optimization for two variables}<br></div><div><br></div><div>Sketch picture if needed, write down equation to be optimized and constraint. Solve constraint for {{c1::one of the two variables}} and {{c2::plug into first equation}}. Find {{c3::critical points}} of equation in {{c4::range of variable}}s and verify that they are {{c5::\(\min / \mathrm{max}\)}} as needed.<br></div>
+
+============================================================
+
+  
+
+    <div>Definite Integral : Suppose \(f(x)\) is continuous on \([a, b]\). {{c5::Divide}} \([a, b]\) into {{c5::\(n\) subintervals}} of {{c5::width}} {{c2::\(\Delta x\)}} and choose {{c1::\(x_{i}^{*}\)}} from {{c5::each interval}}. Then:</div><div><ol><li>\(\int_{a}^{b} f(x) d x\) ={{c4::\(\lim _{n \rightarrow \infty}\)}} {{c3::\(\sum_{i=1}^{n}\)}} {{c1::\(f\left(x_{i}^{*}\right)\)}} {{c2::\(\Delta x\).}}<br></li></ol></div>
+
+============================================================
+
+  
+
+    <br>{{c5::Indefinite}} Integral : {{c5::\(\int f(x) d x\)}} ={{c3::\(F(x)\)}}+{{c4::\(c\)}} where {{c3::\(F(x)\)}} is an {{c1::anti-derivative}} of {{c2::\(f(x)\).}}
+
+============================================================
+
+  
+
+    If \(f(x)\) is {{c5::continuous}} on \([a, b]\) then<br>\(g(x)\) = {{c1::\(\int_{a}^{x}\) \(f(t)\) \(d t\)}} is also {{c5::continuous}} on \([a, b]\) and<br>{{c3::\(g^{\prime}(x)\)}}={{c2::\(\frac{d}{d x}\)}} {{c1::\(\int_{a}^{x}\) \(f(t)\) \(d t\)}}={{c4::\(f(x)\)}}.
+
+============================================================
+
+  
+
+    Part II : \(f(x)\) is {{c4::continuous}} on \([a, b]\), {{c1::\(F(x)\)}} is an {{c3::anti-derivative}} of \(f(x)\), i.e. {{c1::\(F(x)\)}}={{c5::\(\int f(x) d x\)}}, then:<br><ol><li>&nbsp;{{c2::\(\int_a^b\)}} \(f(x)\) \(d x\)={{c1::\(F(b)\)-\(F(a)\)}}.</li></ol>
+
+============================================================
+
+  
+
+    {{c4::\(\frac{d}{d x}\)}} {{c3::\(\int_a^{u(x)}\)}} {{c5::\(f(t) d t\)}}={{c1::\(u^{\prime}(x)\)}} {{c2::\(f[u(x)]\)}}
+
+============================================================
+
+  
+
+    {{c4::\(\frac{d}{d x}\)}} {{c3::\(\int_{v(x)}^b\)}} {{c5::\(f(t) d t\)}}={{c1::\(-v^{\prime}(x)\)}} {{c2::\(f[v(x)]\)}}
+
+============================================================
+
+  
+
+    {{c5::\(\frac{d}{d x}\)}} {{c4::\(\int_{v(x)}^{u(x)}\)}} {{c5::\(f(t) d t\)}}={{c1::\(u^{\prime}(x)\)}} {{c2::\(f[u(x)]\)}}{{c3::-}}{{c2::\(v^{\prime}(x)\)}} {{c1::\(f[v(x)]\)}}
+
+============================================================
+
+  
+
+    <ol><li>{{c5::\(\int\)}} {{c4::\(f(x)\)}} {{c3::\(\pm\)}} {{c4::\(g(x)\)}} {{c5::\(d x\)}} ={{c1::\(\int f(x) d x\)}} {{c3::\(\pm\)}} {{c2::\(\int g(x) d x\)}}</li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c4::\(\int_{a}^{b} f(x) \pm g(x) d x\)}}={{c1::\(\int_{a}^{b} f(x) d x\)}} {{c5::{{c3::\(\pm\)}}}} {{c5::{{c2::\(\int_{a}^{b} g(x) d x\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c5::{{c2::\(\int_{a}^{a}\)}}}} f(x) {{c4::{{c3::\(d x\)}}}} = {{c4::{{c1::\(0\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c3::\(\int_{a}^{b}\)}} \(f(x)\) {{c4::\(d x\)}}={{c5::{{c1::\(-\)}}}}{{c5::{{c2::\(\int_{b}^{a}\)}}}} \(f(x)\) {{c4::\(d x\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c4::\(\int_{a}^{b} f(x) d x\)}} = {{c1::\(\int_{a}^{c} f(x) d x\)}} {{c3::+}} {{c2::\(\int_{c}^{b} f(x) d x\)}} for {{c5::any value \(c\)}}.<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c3::\(\int c f(x) d x\)}}={{c1::\(c\)}} {{c5::{{c2::\(\int f(x) d x\)}}}}, if {{c5::{{c4::\(c \text { is a constant }\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c2::\(\int_a^b\)}} {{c4::\(c f(x)\)}} {{c3::\(d x\)}}={{c1::\(c\)}} {{c2::\(\int_a^b\)}} \(f(x)\) {{c3::\(d x\)}}, {{c5::\(c \text { is a constant }\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c3::\(\int_a^b\)}} {{c4::\(c\)}} {{c5::\(d\) \(x\)}}={{c2::\(c\)}}{{c1::\((b-a)\)}}, if {{c5::\(c \text { is a constant }\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c1::\(\left|\int_a^b f(x) d x\right|\)}} {{c4::\(\leq\)}} {{c3::\(\int_a^b\)}}{{c2::\(|f(x)|\)}} {{c5::\(d x\)}}</li></ol>
+
+============================================================
+
+  
+
+    <ol><li>{{c5::\(\int_{a}^{b}\)}} f(x) {{c5::\(d x\)}} ={{c2::\(\int_{a}^{c} f(x) d x\)}}{{c3::+}}{{c1::\(\int_{c}^{b} f(x) d x\)}} for {{c4::any value \(c\).}}<br></li></ol>
+
+============================================================
+
+  
+
+    <div><ol><li>If \(f(x)\) {{c4::\(\geq\)}} \(g(x)\) on {{c5::\(a \leq x \leq b\)}} then {{c1::\(\int_{a}^{b}\)}} f(x) {{c3::\(d x\)}} {{c2::\(\geq\)}} {{c1::\(\int_{a}^{b}\)}} \(g(x)\) {{c3::\(d x\)}}</li></ol></div>
+
+============================================================
+
+  
+
+    <ol><li>If \(f(x)\) {{c2::\(\geq\)}} {{c3::\(0\)}} on {{c5::\(a \leq x \leq b\)}} then {{c4::\(\int_{a}^{b}\)}} \(f(x)\) {{c4::\(d x\)}} {{c1::\(\geq\)}} {{c3::\(0\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <div><ol><li>If {{c1::\(m\)}} {{c4::\(\leq\)}} \(f(x)\) {{c4::\(\leq\)}} {{c2::\(M\)}} on {{c5::\(a \leq x \leq b\)}} then {{c2::\(m(b-a)\)}} {{c4::\(\leq\)}} {{c3::\(\int_{a}^{b}\)}} \(f(x) d x\) {{c4::\(\leq\)}} {{c1::\(M(b-a)\)}}</li></ol></div>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c1::\(k\)}} \(d x\)={{c2::\(k\)}} {{c5::{{c3::\(x\)}}}}{{c5::{{c4::\(+\)\(c\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c5::{{c3::\(\mathbf{e}^u\)}}}} \(d u\)={{c4::{{c1::\(\mathbf{e}^u\)}}}}{{c4::{{c2::\(+c\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c5::{{c1::\(\cos\)}}}}(\(u\)) \(d u\)={{c4::{{c2::\(\sin\)}}}}(\(u\)){{c4::{{c3::\(+c\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c4::\(\sin\)}}(\(u\)) \(d u\)={{c2::\(-\)}}{{c5::{{c1::\(\cos\)}}}}(u){{c5::{{c3::\(+c\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c5::{{c1::\(\sec^2\)}}}}(\(u\)) \(d u\)={{c4::{{c2::\(\tan\)}}}}(u){{c4::{{c3::\(+c\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c3::\(\csc^2\)}}(\(u\)) \(d u\)={{c2::\(-\)}}{{c5::{{c1::\(\cot\)}}}}(\(u\)){{c5::{{c4::\(+c\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c3::\(x^n\)}} \(d x\)={{c2::\(\frac{1}{n+1}\)}} {{c1::\(x^{n+1}\)}}{{c5::\(+c\)}}, if \(n\) {{c4::\(\neq\)}}{{c4::\(-1\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c4::\(\frac{1}{a x+b}\)}} \(d x\)={{c3::\(\frac{1}{a}\)}} {{c2::\(\ln\)}}({{c1::\(|a x+b|\)}}){{c5::\(+c\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c1::\(\sec\)}}(\(u\)) {{c2::\(\tan\)}}(\(u\)) \(d u\)={{c5::{{c3::\(\sec (u)\)}}}}{{c5::{{c4::\(+c\)}}}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c3::\(\csc\)}}(\(u\)){{c4::\(\cot\)}}(\(u\)) \(d u\)={{c1::\(-\)}}{{c2::\(\csc\)}}(\(u\)){{c5::\(+c\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c3::\(\sec\)}}(u) \(d u\)=&nbsp;</li><ol><li>{{c2::\(\ln\)}}({{c5::{{c1::\(|\sec (u)+\tan (u)|\)}}}}){{c5::{{c4::\(+c\)}}}}<br><br></li></ol></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c4::\(\csc\)}}(u) \(d u\)=&nbsp;</li><ol><li>{{c3::\(-\)}}{{c2::\(\ln\)}}({{c1::\(|\csc (u)+\cot (u)|\)}}){{c5::\(+c\)}}<br><br></li></ol></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c3::\(x^{-1}\)}} \(d x\)=\(\int\) {{c4::\(\frac{1}{x}\)}} \(d x\)={{c1::\(\ln\)}}({{c2::\(|x|\)}}){{c5::\(+c\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <div><ol><li>\(\int\) {{c5::\(\ln\)(\(u\))}} \(d u\)={{c2::\(u\)}}{{c1::\(\ln\)}}(\(u\)){{c3::\(-\)}}{{c4::\(u\)}}{{c5::\(+c\)}}</li></ol></div>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c3::\(\tan\)}}(\(u\)) \(d u\)={{c2::\(\ln\)}}({{c5::{{c1::\(|\sec (u)|\)}}}}){{c5::{{c4::\(+c\)}}}}</li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c1::\(\tan\)}}(\(u\)) \(d u\)={{c3::\(-\)}}{{c4::\(\ln\)}}({{c2::\(|\cos (u)|\)}}){{c5::\(+c\)}}</li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c1::\(\frac{1}{a^2+u^2}\)}} \(d u\)={{c4::\(\frac{1}{a}\)}} {{c3::\(\tan^{-1}\)}}({{c2::\(\frac{u}{a}\)}}){{c5::\(+c\)}}<br></li></ol>
+
+============================================================
+
+  
+
+    <ol><li>\(\int\) {{c1::\(\frac{1}{\sqrt{a^2-u^2} }\)}} \(d u\)={{c3::\(\sin^{-1}\)}}({{c5::{{c2::\(\frac{u}{a}\)}}}}){{c5::{{c4::\(+c\)}}}}</li></ol>
+
+============================================================
+
+  
+
+    <br><ol><li>{{c1::&nbsp;\(\int_{a}^{b}\)}} {{c4::\(f(g(x))\)}} {{c3::\(g^{\prime}(x)\)}} {{c5::\(d x\)}}={{c2::\(\int_{g(a)}^{g(b)}\)}} {{c5::\(f(u)\)}} {{c4::\(d u\)}} using the substitution \(u=g(x)\) where \(d u=g^{\prime}(x) d x\).&nbsp;</li><li>For indefinite integrals drop the limits of integration.</li></ol>
+
+============================================================
+
+  
+
+    \(\text { Example } \int_1^2 5 x^2 \cos \left(x^3\right) d x\)<br><ol><li>\(u\)={{c1::\(x^3\)}}<br></li><li>\(d u\)={{c2::\(3 x^2 d x\)}}<br></li><li>\(x^2 d x\)={{c3::\(\frac{1}{3}\)}} \(d u\)<br></li><li>\(\int_1^2 5 x^2 \cos \left(x^3\right) d x\)=\(\int_1^8\) {{c4::\(\frac{5}{3}\)}} {{c5::\(\cos\)}}(\(u\)) \(d u\)<br></li></ol>
+
+============================================================
+
+  
+
+    For \(\int \sin ^{n}(x) \cos ^{m}(x) d x\) we have the following:<br><ol><li>\(\boldsymbol{n}\) {{c1::odd}}. Strip 1 sine out and convert rest to cosines using {{c4::fundamental trig relation}}, then use the substitution \(u\) = {{c5::\(\cos (x)\)}}.</li><li>\(\boldsymbol{m}\) {{c1::odd}}. Strip 1 cosine out and convert rest to sines using {{c4::fundamental trig relation}}, then use the substitution \(u\) = {{c5::\(\sin (x)\)}}.</li><li>\(n\) and \(m\) {{c2::both even}}. Use {{c3::double angle}} and/or {{c3::half angle}} formulas to reduce the integral into a form that can be integrated.<br></li></ol>
+
+============================================================
+
+  
+
+    <div>For \(\int \tan ^{n}(x) \sec ^{m}(x) d x\) we have the following:<br><ul><li>1. \(n\) odd. Strip {{c1::1 tangent}} and {{c2::1 secant}} out and convert the rest to {{c3::secants}} using \(\tan ^{2}(x)\) = {{c4::\(\sec ^{2}(x)-1\)}}, then use the substitution \(u\) = {{c5::\(\sec (x)\)}}.</li><li>2. \(m\) even. Strip 2 secants out and convert rest to tangents using \(\sec ^{2}(x)=1+\tan ^{2}(x)\), then use the substitution \(u=\tan (x)\).</li><li>3. \(n\) odd and \(m\) even. Use either 1. or 2.</li><li>4. \(n\) even and \(m\) odd. Each integral will be dealt with differently.</li></ul></div>
+
+============================================================
+
+  
+
+    Integration by Parts: <br><ol><li>\(\int\) {{c1::\(u\)}} {{c2::\(d v\)}}={{c3::\(u v\)}}{{c4::\(-\)}}\(\int\) {{c2::\(v\)}} {{c1::\(d u\)}} and&nbsp;</li><li>\(\int_{a}^{b}\) {{c1::\(u\)}} {{c2::\(d v\)}} = {{c3::\(u v\)}} {{c5::\(|_{a} ^{b}\)}}{{c4::\(-\)}}{{c5::\(\int_{a}^{b}\)}} {{c2::\(v\)}} {{c1::\(d u\)}}.&nbsp;</li></ol>
+
+============================================================
+
+  
+
+    \(\text { Example } \int x \mathbf{e}^{-x} d x\)<br><ul><li>\(u\) =&nbsp;{{c1::\(x\)}}<br></li><li>\(dv\) =&nbsp;{{c2::\(e^{-x}\)}}<br></li><li>\(du\) =&nbsp;{{c5::{{c3::\(dx\)}}}}<br></li><li>\(v\) =&nbsp;{{c5::{{c4::\(- e^{-x}\)}}}}<br></li><li>\(\int x \mathbf{e}^{-x} d x\)={{c5::{{c4::\(-\mathbf{e}^{-x}\)}}}} {{c1::\(x\)}} - \(\int\) {{c4::\(-\mathbf{e}^{-x}\)}} {{c5::{{c3::\(d x\)}}}}</li></ul>
+
+============================================================
+
+  
+
+    \(\int\){{c3::\(\ln\)}}(\(x\))\(dx\) =&nbsp;{{c2::\(x\)}}({{c5::{{c1::\(\ln\)(\(x\)) -&nbsp;\(1\)}}}}){{c5::{{c4::\(+c\)}}}}
+
+============================================================
+
+  
+
+    Trig Substitutions : If the integral contains the following root use the given substitution and formula to convert into an integral involving trig functions.<br><ol><li>\(\sqrt{a^2-b^2 x^2}\) \(\Rightarrow\)</li><ol><li>&nbsp;\(x\)={{c1::\(\frac{a}{b}\)}} {{c2::\(\sin\)}} (\(\theta\))</li><li>{{c3::\(\cos^2\)}}(\(\theta\))={{c4::\(1\)}}{{c5::\(-\)}}{{c5::\(\sin ^2\)}}(\(\theta\))<br></li></ol></ol>
+
+============================================================
+
+  
+
+    Trig Substitutions : If the integral contains the following root use the given substitution and formula to convert into an integral involving trig functions.<br><ol><li>\(\sqrt{b^2 x^2-a^2}\) \(\Rightarrow\)</li><ol><li>\(x\)={{c1::\(\frac{a}{b}\)}} {{c2::\(\sec\)}}(\(\theta\))</li><li>{{c3::\(\tan^2\)}}(\(\theta\))={{c4::\(\sec^2\)}}(\(\theta\)){{c5::\(-\)}}{{c5::\(1\)}}<br></li></ol></ol>
+
+============================================================
+
+  
+
+    Trig Substitutions : If the integral contains the following root use the given substitution and formula to convert into an integral involving trig functions.<br><ol><li>\(\sqrt{a^2+b^2 x^2}\) \(\Rightarrow\)</li><ol><li>\(x\)={{c2::\(\frac{a}{b}\)}} {{c1::\(\tan\)}}(\(\theta\))<br></li><li>{{c3::\(\sec^2\)}}(\(\theta\))={{c5::\(1\)}}{{c5::\(+\)}}{{c4::\(\tan^2\)}}(\(\theta\))<br></li></ol></ol>
+
+============================================================
+
+  
+
+    <br>Partial Fractions: If integrating a rational expression involving polynomials, \(\int \frac{P(x)}{Q(x)} d x\), where the degree of \(P(x)\) is {{c5::{{c2::smaller}}}} than the degree of \(Q(x)\). Factor {{c4::{{c1::denominator}}}} as completely as possible and find the {{c4::{{c3::partial fraction decomposition}}}} of the rational expression. Integrate the {{c4::{{c3::partial fraction decomposition (P.F.D.)}}}}.&nbsp;
+
+============================================================
+
+  
+
+    Partial function decomposition<br><ol><li>\(\frac{7 x^2+13 x}{(x-1)\left(x^2+4\right)}\)<br></li><li>= {{c5::{{c1::\(\frac{A}{x-1}\)}}}} +&nbsp;{{c4::{{c2::\(\frac{B x+C}{x^2+4}\)}}}}</li><li>=&nbsp;{{c4::{{c3::\(\frac{A\left(x^2+4\right)+(B x+C)(x-1)}{(x-1)\left(x^2+4\right)}\)}}}}</li></ol>
+
+============================================================
+
+  
+
+    {{c5::Net}} Area : {{c1::\(\int_{a}^{b}\)}} \(f(x)\) \(d x\) represents the {{c5::net}} area between {{c2::\(f(x)\)}} and the {{c3::\(x\)}}-axis with area {{c4::above}} \(x\)-axis {{c5::positive}} and area {{c5::below}} \(x\)-axis {{c4::negative}}.<br><br>{{c1::<img src="paste-3fb2e46f3813cd94b202e997e185a6953c9dae12.jpg">::visualization}}
+
+============================================================
+
+  
+
+    Area Between Curves : The general formulas for the two main cases for each are,<br><br><ol><li>&nbsp;\(y\) = \(f(x)\) \(\Rightarrow\):&nbsp;</li><ol><li>\(A\)={{c3::\(\int_{a}^{b}\)}} [{{c1::upper function}}] - [{{c2::lower function}}] \(d x\)</li></ol><li>&nbsp;\(x\)=\(f(y)\) \(\Rightarrow&nbsp;\)</li><ol><li>\(A\)={{c3::\(\int_{c}^{d}\)}} [{{c2::right function}}] - [{{c1::left function}}] \(d y\)&nbsp;</li></ol><li>If the curves {{c5::intersect}} then the {{c4::area of each portion}} must be found {{c4::individually}}.<br></li></ol>
+
+============================================================
+
+  
+
+    {{c3::Volumes}} of {{c4::Revolution}} : The two main formulas are \(V\)=\(\int\) {{c5::{{c1::\(A(x)\)}}}} {{c5::{{c2::\(d x\)}}}} and \(V\) =\(\int\) {{c5::{{c2::\(A(y)\)}}}} {{c5::{{c1::\(d y\)}}}}.
+
+============================================================
+
+  
+
+    Areas of rings:<br><ol><li><img src="paste-3d7d8519e0f63784417f421ce066efe0309ae3cd.jpg"><br></li><li>Limits&nbsp;{{c1::\(x/y\)}} of {{c2::right}}/{{c3::bot}} ring to&nbsp;{{c1::\(x/y\)}} of {{c3::left}}/{{c2::top}} ring</li><li>For {{c5::horizontal}} orientation use&nbsp;{{c4::\(f(x)\)}}, {{c4::\(g(x)\)}}, {{c4::\(A(x)\)}} and {{c4::\(dx\)}}</li></ol>
+
+============================================================
+
+  
+
+    Areas of cylinders/shells:<br><ol><li><img src="paste-9d390e650c4c8ee3c8a87dfc849a65ab2e072f6a.jpg"><br></li><li>Limits&nbsp;{{c3::\(x/y\)}} of {{c1::inner}} cylinder to&nbsp;{{c3::\(x/y\)}} of {{c2::outer}} cylinder</li><li>{{c5::Horizontal}} orientation: axis uses&nbsp;{{c4::\(f(y)\),&nbsp;\(g(y)\),&nbsp;\(A(y)\) and&nbsp;\(dy\)}}</li><li>{{c4::Vertical}} orientation: axis uses&nbsp;{{c5::\(f(x)\),&nbsp;\(g(x)\),&nbsp;\(A(x)\),&nbsp;\(dx\)}}</li></ol>
+
+============================================================
+
+  
+
+    {{c4::Work}}: If a {{c3::force}} of \(F(x)\) {{c5::moves an object}} in {{c2::\(a \leq x \leq b\)}}, the {{c4::work}} done is \(W\)={{c1::\(\int_{a}^{b}\) \(F(x)\) \(d x\)}}
+
+============================================================
+
+  
+
+    {{c3::Average}} Function Value : The {{c3::average}} value of \(f(x)\) on {{c4::\(a \leq x \leq b\)}} is {{c3::\(f_{a v g}\)}} ={{c2::\(\frac{1}{b-a}\)}} {{c1::\(\int_{a}^{b}\)}} {{c5::\(f(x)\) \(d x\)}}
+
+============================================================
+
+  
+
+    Arc Length \&amp; Surface Area : The three basic formulas for length \(L\) and surface area \(SA\) are:<br><ol><li>{{c5::\(L\)}}={{c4::\(\int_a^b\)}} {{c1::\(d s\)}}<br></li><li>{{c5::\(S A\)}}={{c4::\(\int_a^b\)}} {{c2::\(2 \pi y\)}} \(d s\) {{c3::\(\text { (rotate about } x \text {-axis) }\)::rotation}}<br></li><li>{{c5::\(S A\)}}={{c4::\(\int_a^b \)}} {{c3::\(2 \pi x\)}} \(d s\) {{c2::\(\text { (rotate about } y \text {-axis) }\)::rotation}}<br></li></ol>
+
+============================================================
+
+  
+
+    <div>Arc Length \&amp; Surface Area : The three basic formulas are,<br>\[<br>L=\int_{a}^{b} d s \quad S A=\int_{a}^{b} 2 \pi y d s \text { (rotate about } x \text {-axis) } \quad S A=\int_{a}^{b} 2 \pi x d s \text { (rotate about } y \text {-axis) }<br>\]<br>where \(d s\) is dependent upon the form of the function being worked with as follows.<br></div><div><ol><li>\(d s\)={{c1::\(\sqrt{1+\left(\frac{d y}{d x}\right)^2}\)}} {{c3::\(d x\)&nbsp;}}&nbsp;</li><ol><li>if&nbsp; {{c4::\(y\)}}={{c3::\(f(x)\)}} for {{c5::\(a \leq x \leq b\)}}</li></ol><li>\(d s\)={{c2::\(\sqrt{1+\left(\frac{d x}{d y}\right)^2}\)}} {{c4::\(d y\)}}&nbsp;&nbsp;</li><ol><li>if&nbsp; {{c3::\(x\)}}={{c4::\(f(y)\)}} for {{c5::\(a \leq y \leq b\)}}</li></ol></ol></div>
+
+============================================================
+
+  
+
+    <div>Arc Length \&amp; Surface Area : The three basic formulas are,<br>\[<br>L=\int_{a}^{b} d s \quad S A=\int_{a}^{b} 2 \pi y d s \text { (rotate about } x \text {-axis) } \quad S A=\int_{a}^{b} 2 \pi x d s \text { (rotate about } y \text {-axis) }<br>\]<br>where \(d s\) is dependent upon the form of the function being worked with as follows.<br></div><div><ol><li>\(d s\)={{c1::\(\sqrt{\left(\frac{d x}{d t}\right)^2+\left(\frac{d y}{d t}\right)^2}\)}} {{c5::\(d t\)&nbsp;}}</li><ol><li>if {{c3::\(x\)}}={{c2::\(f(t)\)}}, {{c2::\(y\)}}={{c3::\(g(t)\)}} for {{c4::\(a \leq t \leq b\)}}</li></ol></ol></div>
+
+============================================================
+
+  
+
+    <div>Arc Length \&amp; Surface Area : The three basic formulas are,<br>\[<br>L=\int_{a}^{b} d s \quad S A=\int_{a}^{b} 2 \pi y d s \text { (rotate about } x \text {-axis) } \quad S A=\int_{a}^{b} 2 \pi x d s \text { (rotate about } y \text {-axis) }<br>\]<br>where \(d s\) is dependent upon the form of the function being worked with as follows.<br></div><div><ol><li>\(d s\)={{c1::\(\sqrt{r^2+\left(\frac{d r}{d \theta}\right)^2}\)}} {{c3::\(d \theta\)&nbsp;}}</li><ol><li>if {{c5::\(r\)}}={{c2::\(f(\theta)\)}}, for {{c4::\(a \leq \theta \leq b\)}}</li></ol></ol></div>
+
+============================================================
+
+  
+
+    An {{c5::{{c3::improper}}}} integral is an integral with one or more {{c4::{{c1::infinite}}}} limits and/or {{c4::{{c2::discontinuous integrands}}}}.&nbsp;
+
+============================================================
+
+  
+
+    An integral is called {{c5::convergent}} if the limit {{c1::exists}} and has a {{c2::finite}} value and {{c5::divergent}} if the limit {{c3::doesn't}} exist or has {{c4::infinite}} value.
+
+============================================================
+
+  
+
+    <br>1. {{c5::{{c1::\(\int_{a}^{\infty}\)}}}} \(f(x)\) \(d x\)={{c4::{{c2::\(\lim _{t \rightarrow \infty}\)}}}} {{c4::{{c3::\(\int_{a}^{t}\)}}}} \(f(x)\) \(d x\)
+
+============================================================
+
+  
+
+    2. {{c5::{{c1::\(\int_{-\infty}^{b}\)}}}} \(f(x)\) \(d x\)={{c4::{{c2::\(\lim _{t \rightarrow-\infty}\)}}}} {{c4::{{c3::\(\int_{t}^{b}\)}}}} \(f(x)\) \(d x\)
+
+============================================================
+
+  
+
+    <br>3. {{c1::\(\int_{-\infty}^{\infty}\)}} \(f(x) d x\)={{c2::\(\int_{-\infty}^{c}\)}} \(f(x)\) {{c2::\(d x\)}}{{c5::\(+\)}}{{c3::\(\int_{c}^{\infty}\)}} \(f(x)\) {{c3::\(d x\)}} provided both integrals are {{c4::convergent}}.
+
+============================================================
+
+  
+
+    Discontinuity at&nbsp; {{c4::a}}: {{c1::\(\int_a\)}} \(f(x)\) \(d x\)={{c5::{{c2::\(\lim _{t \rightarrow a^{+} }\)}}}} {{c5::{{c3::\(\int_t\)}}}} \(f(x)\) \(d x\)
+
+============================================================
+
+  
+
+    &nbsp;Discontinuity at&nbsp; {{c4::b}}: {{c1::\(\int_a^b\)}} \(f(x) d x\)={{c5::{{c2::\(\lim _{t \rightarrow b^{-} }\)}}}} {{c5::{{c3::\(\int_a^t\)}}}} \(f(x) d x\)
+
+============================================================
+
+  
+
+    Discontinuity at&nbsp;{{c5::\(a&lt;c&lt;b\)}}: <br><ol><li>{{c1::\(\int_a^b\)}} \(f(x) d x\)={{c2::\(\int_a^c\)}} \(f(x) d x\)+{{c3::\(\int_c^b\)}} \(f(x) d x\)&nbsp;</li><li>provided both are {{c4::convergent}}</li></ol>
+
+============================================================
+
+  
+
+    Comparison Test for Improper Integrals: If \(f(x)\) {{c5::\(\geq\)}} \(g(x)\) {{c5::\(\geq\)}} {{c3::\(0\)}} on {{c5::\([a, \infty)\)}} then,<br><ol><li>If {{c1::\(\int_{a}^{\infty} f(x) d x\)}} is {{c3::convergent}} then {{c2::\(\int_{a}^{\infty} g(x) d x\)}} is {{c4::convergent}} (if {{c1::larger}} {{c3::converges}} so does the {{c2::smaller}}).<br></li></ol>
+
+============================================================
+
+  
+
+    <div>Comparison Test for Improper Integrals: If \(f(x)\) \(\geq\) \(g(x)\) \(\geq\) \(0\) on \([a, \infty)\) then,<br></div><div><ol><li>If {{c1::\(\int_{a}^{\infty} g(x) d x\)}} is {{c3::divergent}} then {{c5::{{c2::\(\int_{a}^{\infty} f(x) d x\)}}}} is {{c5::{{c4::divergent}}}} (if {{c1::smaller}} {{c3::diverges}} so does the {{c5::{{c2::larger}}}}).<br></li></ol></div>
+
+============================================================
+
+  
+
+    <div><div>Useful fact: If \(a\) {{c4::\(&gt;\)}} {{c4::\(0\)}} then {{c5::\(\int_{a}^{\infty}\)}} {{c3::\(\frac{1}{x^{p} }\)}} \(d x\) converges if \(p\){{c1::\(&gt;\)}} {{c1::\(1\)}} and diverges for \(p\) {{c2::\(\leq\)}} {{c2::\(1\)}}.<br></div></div>
+
+============================================================
+
+  
+
+    For given integral \(\int_{a}^{b} f(x) d x\) and \(n\) (must be even for Simpson's Rule) define \(\Delta x=\frac{b-a}{n}\) and divide \([a, b]\) into \(n\) subintervals \(\left[x_{0}, x_{1}\right],\left[x_{1}, x_{2}\right], \ldots,\left[x_{n-1}, x_{n}\right]\) with \(x_{0}\)={{c5::\(a\)}} and \(x_{n}\)={{c5::\(b\)}} then,<br><ol><li>{{c3::Midpoint}} Rule :&nbsp;</li><ol><li>\(\int_{a}^{b} f(x) d x\) \(\approx\) {{c1::\(\Delta x\)}} {{c2::\(\left[f\left(x_{1}^{*}\right)+f\left(x_{2}^{*}\right)+\cdots+f\left(x_{n}^{*}\right)\right], x_{i}^{*}\)}} is {{c3::midpoint}} {{c4::\(\left[x_{i-1}, x_{i}\right]\)}}</li></ol></ol>
+
+============================================================
+
+  
+
+    For given integral \(\int_{a}^{b} f(x) d x\) and \(n\) (must be even for Simpson's Rule) define \(\Delta x\)={{c1::\(\frac{b-a}{n}\)}} and divide \([a, b]\) into \(n\) subintervals \(\left[x_{0}, x_{1}\right],\left[x_{1}, x_{2}\right], \ldots,\left[x_{n-1}, x_{n}\right]\) with \(x_{0}=a\) and \(x_{n}=b\) then,<br><br><ol><li>Trapezoid Rule :&nbsp;</li><ol><li>\(\int_{a}^{b} f(x) d x \approx\)&nbsp;</li><ol><li>{{c5::\(\frac{\Delta x}{2}\)}}[{{c2::\(f\left(x_{0}\right)\)}}+{{c4::\(2 f\left(x_{1}\right)\)}}+{{c4::\(2 f\left(x_{2}\right)\)}}+\(\cdots\)+{{c4::\(2 f\left(x_{n-1}\right)\)}}+{{c3::\(f\left(x_{n}\right)\)}}]</li></ol></ol></ol>
+
+============================================================
+
+  
+
+    For given integral \(\int_{a}^{b} f(x) d x\) and \(n\) (must be even for Simpson's Rule) define \(\Delta x=\frac{b-a}{n}\) and divide \([a, b]\) into \(n\) subintervals \(\left[x_{0}, x_{1}\right],\left[x_{1}, x_{2}\right], \ldots,\left[x_{n-1}, x_{n}\right]\) with \(x_{0}=a\) and \(x_{n}=b\) then,<br><ol><li>{{c5::Simpson's}} Rule : \(\int_{a}^{b} f(x) d x \approx\)</li><ol><li>&nbsp;{{c1::\(\frac{\Delta x}{3}\)}}[{{c2::\(f\left(x_{0}\right)\)}}+{{c3::\(4 f\left(x_{1}\right)\)}}+{{c4::\(2 f\left(x_{2}\right)\)}}+\(\cdots\)+{{c4::\(2 f\left(x_{n-2}\right)\)}}+{{c3::\(4 f\left(x_{n-1}\right)\)}}+{{c2::\(f\left(x_{n}\right)\)}}]</li></ol></ol>
+
+============================================================
+

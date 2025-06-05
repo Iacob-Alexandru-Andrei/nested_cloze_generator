@@ -3,6 +3,7 @@ import requests
 import re
 import os
 from tqdm import tqdm
+import argparse
 
 ###############################################################################
 # Configuration
@@ -132,14 +133,14 @@ def strip_nested_baseindex_hint(field_text: str) -> str:
     return "".join(result)
 
 
-def main():
-    note_ids = invoke("findNotes", query="deck:0Top::Studying")
+def main(deck_name: str):
+    note_ids = invoke("findNotes", query=f"deck:{deck_name}")
     print(f"Found {len(note_ids)} notes.\n")
     if not note_ids:
         return
 
     batch_size = 50
-    preview_file = os.path.join(os.getcwd(), "stripped_preview.txt")
+    preview_file = os.path.join(os.getcwd(), f"{deck_name}_stripped_preview.txt")
     with open(preview_file, "w", encoding="utf-8") as f:
         f.write("=== Stripped Clozes Preview (No Changes in Anki) ===\n\n")
 
@@ -176,13 +177,13 @@ def main():
 
                     # If we have changes, log them
                     if changes_for_note:
-                        f.write(f"Note ID: {note_id}\n")
+                        # f.write(f"Note ID: {note_id}\n")
                         for (fname, before_text, after_text) in changes_for_note:
-                            f.write(f"  Field: {fname}\n")
-                            f.write("    Before:\n")
-                            f.write(f"      {before_text}\n\n")
-                            f.write("    After:\n")
-                            f.write(f"      {after_text}\n\n")
+                            # f.write(f"  Field: {fname}\n")
+                            # f.write("    Before:\n")
+                            # f.write(f"      {before_text}\n\n")
+                            # f.write("    After:\n")
+                            f.write(f"  \n\n    {after_text}\n\n")
                         f.write("=" * 60 + "\n\n")
 
                     pbar.update(1)
@@ -190,4 +191,9 @@ def main():
     print(f"Preview complete. See '{preview_file}' for details.")
 
 if __name__ == "__main__":
-    main()
+    # Add argument parsing for name of the deck
+    parser = argparse.ArgumentParser()
+    parser.add_argument("deck_name", help="Name of the deck to process", type=str)
+    args = parser.parse_args()
+    print(args.deck_name)
+    main(args.deck_name)

@@ -14,7 +14,7 @@ The flashcards must be **self-contained**, preserve the original wording **exact
 ──────────────────────────────────────────────────────────────────────────────
 [Definitions]
 • **Cloze deletion**: Replacing a key term/phrase with `{{cX:: … }}` (plus an optional hint).  
-• **Key information**: Essential concepts a graduate student should recall (definitions, theorems, crucial values, conditions, etc.).  
+• **Key information**: Essential concepts a graduate student should recall (definitions, theorems, crucial values, conditions, exercises etc.).  
 • **Trivial information**: Words whose removal would not test meaningful knowledge (articles, common stop-words, filler). Never cloze these.  
 • **Ambiguity**: A cloze is ambiguous if multiple answers plausibly fit; avoid by choosing a more specific span or adding a concise hint.
 

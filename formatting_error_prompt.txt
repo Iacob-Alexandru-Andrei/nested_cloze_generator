@@ -1,0 +1,7 @@
+Output to a goddamn file you moron, open one of your tools and call .write() I will not accept any answers in chat. If you have to, output as a code block.
+
+Great, now we need to fix a formatting error, when you output math to chat you lose the slash that goes in front of ( and ), specifically \( and \) become ( and ). Please output to a plaintext file making sure that you add back the slashes i.e \ to the ( and ), making all math be between \( \). Make sure this is properly done, i.e math delimiters are inside cloze markers like {{ and }} and not outside.
+
+Please save a new file, do not under any circumstances answer as normal
+
+Output to a goddamn file you moron

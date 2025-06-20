@@ -188,4 +188,24 @@ Exercise 3.1.1 Let \(a, b, c, d\) be objects such that {{c3::\(\{a, b\}\)}}={{c4
 Exercise 3.1.11 Show that the axiom of {{c1::replacement}} implies the axiom of {{c2::specification}}
 
 Exercise 3.1.12 Suppose that \(A, B, A^{\prime}, B^{\prime}\) are sets such that \(A^{\prime}\) {{c5::\(\subseteq A\)}} and \(B^{\prime}\) {{c5::\(\subseteq B\)}}.(i) Show that {{c1::\(A^{\prime}\) \(\cup\) \(B^{\prime}\)}} \(\subseteq\) {{c2::\(A \cup B\)}} and {{c3::\(A^{\prime} \cap B^{\prime}\)}} \(\subseteq\) {{c4::\(A \cap B\).}}
+
+Definition 11.3.9 (Riemann sums) Let \(f: I \rightarrow \mathbf{R}\) be a bounded function on a bounded interval \(I\), and let \(\mathbf{P}\) be a {{c6::partition}} of \(I\). We define the upper Riemann sum \(U(f, \mathbf{P})\) and the lower Riemann sum \(L(f, \mathbf{P})\) by
+\[
+U(f, \mathbf{P}):={{c5::\sum}}_{{{c4::J \in \mathbf{P}: J \neq \emptyset}} }\left({{c1::\sup}} _{{{c3::x \in J}} } {{c6::f(x)}} \right){{c2::|J|}}
+\]
+and
+\[
+L(f, \mathbf{P}):={{c5::\sum}}_{{{c4::J \in \mathbf{P}: J \neq \emptyset}} }\left({{c1::\inf}} _{{{c3::x \in J}} } {{c6::f(x)}} \right){{c2::|J|}} .
+\]
+
+
+Lemma 11.3.11 Let \(f: I \rightarrow \mathbf{R}\) be a bounded function on a bounded interval \(I\), and let \(g\) be a function which {{c4::majorizes}} \(f\) and which is {{c5::piecewise constant}} with respect to some {{c6::partition}} \(\mathbf{P}\) of I. Then
+\[
+{{c2::\text { p.c. } \int_{I} g}} {{c1::\geq}} {{c3::U(f, \mathbf{P})}}
+\]
+
+Similarly, if h is a function which {{c4::minorizes}} \(f\) and is {{c5::piecewise constant}} with respect to \(\mathbf{P}\), then
+\[
+{{c3::\text { p.c. } \int_{I} h}} {{c1::\leq}} {{c2::L(f, \mathbf{P})}}
+\]
 ```
